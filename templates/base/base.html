@@ -1,0 +1,799 @@
+{% extends 'index.html' %}
+
+{% load static %}
+
+{% block content %}
+    <!-- ==================== Start Navbar ==================== -->
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+
+            <!-- Logo -->
+            <a class="logo" href="#">
+                <img src="{% static 'assets/img/Logo-GC.png' %}" alt="logo">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="icon-bar"><i class="fas fa-bars"></i></span>
+            </button>
+
+            <!-- navbar links -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/pages/historique.html">Historique</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
+                            aria-haspopup="true" aria-expanded="false">Les Khalifes</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="index.html">Seydina Issa Rohou LAHI (PSL)</a>
+                            <a class="dropdown-item" href="index2.html">Seydina Mandione LAHI</a>
+                            <a class="dropdown-item" href="index3.html">Baye Seydi Thiaw</a>
+                            <a class="dropdown-item" href="index4.html">Mame Rane</a>
+                            <a class="dropdown-item" href="index5.html">Seydina Abdoulaye Thiaw LAHI</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
+                        aria-haspopup="true" aria-expanded="false">Sermons</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="showcase.html">Seydina Limamou LAHI (PSL)</a>
+                            <a class="dropdown-item" href="showcase2.html">Seydina Issa Rohou LAHI (PSL)</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
+                            aria-haspopup="true" aria-expanded="false">Rubriques</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="showcase.html">Ibaadat</a>
+                            <a class="dropdown-item" href="showcase2.html">Taarikh</a>
+                            <a class="dropdown-item" href="showcase3.html">Dou'a</a>
+                            <a class="dropdown-item" href="showcase4.html">Teere</a>
+                            <a class="dropdown-item" href="showcase5.html">Kurus</a>
+                            <a class="dropdown-item" href="showcase3.html">Calendrier</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">Actualités</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
+                            aria-haspopup="true" aria-expanded="false">Média Tech</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="/pages/galery.html">Images</a>
+                            <a class="dropdown-item" href="works2.html">Vidéos</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                <div class="search">
+                    <span class="icon cursor-pointer"><ion-icon name="search-outline"></ion-icon></span>
+                    <div class="search-form text-center custom-font">
+                        <form>
+                            <input type="text" name="search" placeholder="Rechercher">
+                        </form>
+                        <span class="close cursor-pointer"><ion-icon name="close-outline"></ion-icon></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ==================== End Navbar ==================== -->
+
+
+
+    <!-- ==================== Start Slider ==================== -->
+
+    <header class="slider slider-prlx fixed-slider text-center">
+        <div class="swiper-container parallax-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="bg-img valign" data-background="{% static 'assets/img/slid/04.jpg' %}" data-overlay-dark="6">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-7 col-md-9">
+                                    <div class="caption center">
+                                        <h1 data-splitting>Lorem <br> Upsum Dolor</h1>
+                                        <p></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="bg-img valign" data-background="{% static 'assets/img/slid/05.jpg' %}" data-overlay-dark="6">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-7 col-md-9">
+                                    <div class="caption center">
+                                        <h1 data-splitting>Lorem <br> Upsum Dolor</h1>
+                                        <p></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="bg-img valign" data-background="{% static 'assets/img/slid/08.jpg' %}" data-overlay-dark="6">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-7 col-md-9">
+                                    <div class="caption center">
+                                        <h1 data-splitting>Lorem <br> Upsum Dolor</h1>
+                                        <p></p>
+                                        <!--<a href="#0" class="btn-curve btn-lit mt-30">
+                                            <span>Look More</span>
+                                        </a>-->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- slider setting -->
+            <div class="setone setwo">
+                <div class="swiper-button-next swiper-nav-ctrl next-ctrl cursor-pointer">
+                    <ion-icon name="chevron-forward-outline"></ion-icon>
+                </div>
+                <div class="swiper-button-prev swiper-nav-ctrl prev-ctrl cursor-pointer">
+                    <ion-icon name="chevron-back-outline"></ion-icon>
+                </div>
+            </div>
+            <div class="swiper-pagination top botm custom-font"></div>
+
+            <div class="social-icon">
+                <a href="#0"><i class="fa fa-facebook-f"></i></a>
+                <a href="#0"><i class="fa fa-twitter"></i></a>
+                <a href="#0"><i class="fa fa-instagram"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==================== End Slider ==================== -->
+    <div class="main-content">
+        <!-- ==================== Start about ==================== -->
+
+        <div class="about section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5">
+                        <div class="img-mons">
+                            <div class="row">
+                                <div class="col-md-5 cmd-padding valign">
+                                    <div class="img1 wow imago" data-wow-delay=".5s">
+                                        <img src="{% static 'assets/img/intro/1.jpg' %}" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-md-7 cmd-padding">
+                                    <div class="img2 wow imago" data-wow-delay=".3s">
+                                        <img src="{% static 'assets/img/intro/3.jpg' %}" alt="">
+                                    </div>
+                                    <div class="img3 wow imago" data-wow-delay=".8s">
+                                        <img src="{% static 'assets/img/intro/2.jpg' %}" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 offset-lg-1 valign">
+                        <div class="content">
+                            <div class="sub-title">
+                                <h6>تاريخي</h6>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <h3 class="main-title wow" data-splitting>Histoire de la <br> communauté layene.</h3>
+                            <p class="wow txt" data-splitting>Au nom d’Allah le Miséricordieux et le très Miséricordieux Le dimanche matin premier (1er) Chaban 1301 de l'hégire.
+                                , à Yoff dans la presqu’île du Cap-Vert, à la pointe la plus occidentale de l’Afrique, le Saint Maître Seydina Limamou Lahi (PSL) lançait à l’âge de quarante (40) ans son appel à l’endroit des hommes et des Djinns, 
+                                se déclarant être le Mahdi attendu à la fin des temps pour la restauration de l’orthodoxie musulmane. 
+                                "ADJIBO DAHIYA LAYE YA MAHCHARAL INS WAL DJIN INI RAASOULOULAHI ILEYKOUM" : (“Venez à l'appel de Dieu vous, hommes et djinns, je suis l'envoyé de Dieu").</p>
+                                <a href="pages/historique.html" class="btn-curve btn-lit mt-30">
+                                    <span>Voir plus</span>
+                                </a>
+                            <!--<div class="ftbox mt-30">
+                                <ul>
+                                    <li class="wow fadeIn" data-wow-delay=".3s">
+                                        <span class="icon pe-7s-gleam"></span>
+                                        <h6 class="custom-font">Pixel <br> Perfect</h6>
+                                        <div class="dots">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </div>
+                                    </li>
+                                    <li class="space wow fadeIn" data-wow-delay=".5s">
+                                        <span class="icon pe-7s-paint-bucket"></span>
+                                        <h6 class="custom-font">Creative <br> Design</h6>
+                                        <div class="dots">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </div>
+                                    </li>
+                                    <li class="wow fadeIn" data-wow-delay=".8s">
+                                        <span class="icon pe-7s-medal"></span>
+                                        <h6 class="custom-font">Heigh <br> Perfomance</h6>
+                                        <div class="dots">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <!-- ==================== End about ==================== -->
+
+    <!-- ==================== Start testimonials ==================== -->
+
+        <section class="testimonials section-padding bg-img mt-30 pt-100 -khalife" data-background="{% static 'assets/img/portfolio/bg-3.jpg' %}">
+            <div class="container position-re">
+                <div class="sec-head custom-font text-center">
+                    <h6 class="wow fadeIn -khalife-arabic" data-wow-delay=".5s">برنامج</h6>
+                    <h3 class="wow _text-header" data-splitting>Les Khalifes.</h3>
+                    <span class="-tbg-khalife">Les Khalifes</span>
+                </div>
+                <div class="row justify-content-center wow fadeInUp" data-wow-delay=".5s">
+                    <div class="col-lg-8">
+                        <div class="slic-item">
+                            <div class="item">
+                                <div class="info">
+                                    <div class="cont">
+                                        <div class="author">
+                                            <div class="img">
+                                                <img src="{% static 'assets/img/clients/01.jpg' %}" alt="">
+                                            </div>
+                                            <h6 class="author-name custom-font">Seydina Issa Rohou LAHI (PSL)</h6>
+                                            <span class="author-details">1er Khalife du Mahdi</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Nesciunt perferendis voluptatum esse ullam veniam facilis exercitationem iure ipsa et, 
+                                </p>
+                            </div>
+                            <div class="item">
+                                <div class="info">
+                                    <div class="cont">
+                                        <div class="author">
+                                            <div class="img">
+                                                <img src="{% static 'assets/img/clients/02.jpg' %}" alt="">
+                                            </div>
+                                            <h6 class="author-name custom-font">Seydina Mandione LAHI</h6>
+                                            <span class="author-details">2e Khalife du Mahdi</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Nesciunt perferendis voluptatum esse ullam veniam facilis exercitationem iure ipsa et, </p>
+                            </div>
+                            <div class="item">
+                                <div class="info">
+                                    <div class="cont">
+                                        <div class="author">
+                                            <div class="img">
+                                                <img src="{% static 'assets/img/clients/03.jpg' %}" alt="">
+                                            </div>
+                                            <h6 class="author-name custom-font">Baye Seydi Thiaw</h6>
+                                            <span class="author-details">3e Khalife du Mahdi</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Nesciunt perferendis voluptatum esse ullam veniam facilis exercitationem iure ipsa et, </p>
+                            </div>
+                            <div class="item">
+                                <div class="info">
+                                    <div class="cont">
+                                        <div class="author">
+                                            <div class="img">
+                                                <img src="{% static 'assets/img/clients/04.jpg' %}" alt="">
+                                            </div>
+                                            <h6 class="author-name custom-font">Seydina Mame Alassane Lahi</h6>
+                                            <span class="author-details">4e Khalife du Mahdi</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Nesciunt perferendis voluptatum esse ullam veniam facilis exercitationem iure ipsa et, </p>
+                            </div>
+                            <div class="item">
+                                <div class="info">
+                                    <div class="cont">
+                                        <div class="author">
+                                            <div class="img">
+                                                <img src="{% static 'assets/img/clients/05.jpg' %}" alt="">
+                                            </div>
+                                            <h6 class="author-name custom-font">Seydina Abdoulaye Thiaw LAHI</h6>
+                                            <span class="author-details">Actuel Khalife du Mahdi</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Nesciunt perferendis voluptatum esse ullam veniam facilis exercitationem iure ipsa et, </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="arrows">
+                    <div class="next cursor-pointer">
+                        <ion-icon name="chevron-forward-outline"></ion-icon>
+                    </div>
+                    <div class="prev cursor-pointer">
+                        <ion-icon name="chevron-back-outline"></ion-icon>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <!-- ==================== End testimonials ==================== -->
+
+    <!-- ==================== Start Services ==================== -->
+
+        <section class="services section-padding">
+            <div class="container">
+                <div class="row rone">
+                    <div class="col-lg-3 wow fadeInUp" data-wow-delay=".4s">
+                        <div class="intro md-mb30">
+                            <div class="sub-title">
+                                <h6>برنامج</h6>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <h2 class="extra-title wow" data-splitting>Les Sermons</h2>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 offset-lg-1 wow fadeInUp" data-wow-delay=".4s">
+                        <div class="mas-item">
+                            <a href="#">
+                                <img class="-icon" src="{% static 'assets/img/icon/teere.svg' %}" alt="" />
+                                <h6>les Sermons<br>de Seydina Limamou LAHI (PSL)</h6>
+                                {% comment %} <h3>Lorem ipsum dolor sit amet consectetur adipisicing</h3> {% endcomment %}
+                        </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 offset-lg-1 wow fadeInUp" data-wow-delay=".4s">
+                        <div class="mas-item">
+                            <a href="#">
+                                <img class="-icon" src="{% static 'assets/img/icon/teere.svg' %}" alt="" />
+                                <h6>Les Sermons <br> de Seydina Issa Rohou LAHI (PSL)</h6>
+                            {% comment %} <h3>Lorem ipsum dolor sit amet consectetur adipisicing</h3> {% endcomment %}
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <!-- ==================== End Services ==================== -->
+
+        <!-- ==================== Start block-sec ==================== -->
+
+        <section class="block-sec">
+            <div class="background bg-img pb-0" data-background="{% static 'img/pattern.png' %}">
+                <div class="showreel">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-9">
+                                <div class="video-box">
+                                    <div class="tit-text">
+                                        <h6 class="wow fadeIn arabic-khalife" data-wow-delay=".5s">تاريخي</h6>
+                                        <h3 class="wow" data-splitting>En Direct</h3>
+                                    </div>
+                                    <div class="wow imago">
+                                        <div class="img">
+                                            <img src="{% static 'assets/img/vid-1.jpg' %}" alt="">
+                                        </div>
+                                        <div class="vid-icon">
+                                            <a class="vid" href="https://vimeo.com/127203262">
+                                                <div class="vid-butn">
+                                                    <span class="icon">
+                                                        <i class="fa fa-play"></i>
+                                                    </span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <!-- ==================== End block-sec ==================== -->
+
+    <!-- ==================== Start Services ==================== -->
+
+        <section class="services section-padding sub-bg mt-150">
+            <div class="container">
+                <div class="sec-head custom-font text-center">
+                    <h6 class="wow fadeIn text-service" data-wow-delay=".5s">برنامج</h6>
+                    <h3 class="wow" data-splitting>Rubriques.</h3>
+                    <span class="tbg">Rubriques</span>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <a href="#">
+                            <div class="item md-mb50 wow fadeInUp serv-1" data-wow-delay=".5s">
+                                <img class="-icon" src="{% static 'assets/img/icon/ibaadat.svg' %}" alt="" />
+                                <h6>Ibaadat</h6>
+                                <p>Tempore corrupti temporibus fuga earum asperiores fugit laudantium.</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4">
+                        <a href="#">
+                            <div class="item md-mb50 wow fadeInUp serv-2" data-wow-delay=".3s">
+                                <img class="-icon" src="{% static 'assets/img/icon/taarikh.svg' %}" alt="" />
+                                <h6>Taarikh</h6>
+                                <p>Tempore corrupti temporibus fuga earum asperiores fugit laudantium.</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4">
+                        <a href="#">
+                            <div class="item wow fadeInUp serv-3" data-wow-delay=".8s">
+                                <img class="-icon" src="{% static 'assets/img/icon/doua.svg' %}" alt="" />
+                                <h6>Dou'a</h6>
+                                <p>Tempore corrupti temporibus fuga earum asperiores fugit laudantium.</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-4">
+                        <a href="#">
+                            <div class="item md-mb50 wow fadeInUp serv-4" data-wow-delay=".5s">
+                                <img class="-icon" src="{% static 'assets/img/icon/teere.svg' %}" alt="" />
+                                <h6>Teere</h6>
+                                <p>Tempore corrupti temporibus fuga earum asperiores fugit laudantium.</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4">
+                        <a href="#">
+                            <div class="item md-mb50 wow fadeInUp serv-5" data-wow-delay=".3s">
+                                <img class="-icon" src="{% static 'assets/img/icon/kurus.svg' %}" alt="" />
+                                <h6>Kurus</h6>
+                                <p>Tempore corrupti temporibus fuga earum asperiores fugit laudantium.</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4">
+                        <a href="#">
+                            <div class="item wow fadeInUp serv-6" data-wow-delay=".8s">
+                                <img class="-icon" src="{% static 'assets/img/icon/calendrier.svg' %}" alt="" />
+                                <h6>Calendrier</h6>
+                                <p>Tempore corrupti temporibus fuga earum asperiores fugit laudantium.</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+
+        <!-- ==================== End Services ==================== -->
+
+
+        <!-- ==================== Start block-sec ==================== -->
+
+        <section class="block-sec mt-80">
+            <div class="background bg-img section-padding pb-0" data-overlay-dark="8">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="vid-area">
+                                <div class="cont">
+                                    <h6 class="wow fadeIn arabic-khalife" data-wow-delay=".5s">تاريخي</h6>
+                                    <h3 class="wow" data-splitting>Lorem ipsum dolor sit amet consectetur.</h3>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, sunt! 
+                                        Magnam eos beatae, optio suscipit nulla.</p>
+                                </div>
+                                <div class="cta-app">
+                                    <a href="#0" class="btn-curve btn-tel btn-lit mt-30">
+                                        <span>Télécharger l'App</span>
+                                    </a>
+                                    <a href="#0" class="btn-video btn-lit mt-30">
+                                        <span>Regardez la vidéo</span>
+                                        <ion-icon name="caret-forward-circle-outline"></ion-icon>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-5 offset-lg-1">
+                            <div class="testim-box">
+                                <div class="slic-item wow fadeInUp" data-wow-delay=".5s">
+                                    <div class="item">
+                                        <div class="img">
+                                            <div class="img-box">
+                                                <img src="{% static 'assets/img/app/Phone.png' %}" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== End block-sec ==================== -->
+
+
+
+        <!-- ==================== Start Works ==================== -->
+
+        <section class="work-carousel section-padding caroul position-re -khalife mt-100">
+            <div class="container-fluid">
+                <div class="sec-head custom-font text-center">
+                    <h6 class="wow fadeIn arabic-khalife" data-wow-delay=".5s">تاريخي</h6>
+                    <h3 class="wow -header-khalife" data-splitting>Images.</h3>
+                    <span class="tbg-khalife">Images</span>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 no-padding">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="content wow fadeInUp" data-wow-delay=".3s">
+                                        <div class="item-img bg-img wow imago" data-background="{% static 'assets/img/portfolio/20.jpg' %}">
+                                        </div>
+                                        <div class="img-border"></div>
+                                        <div class="cont bgbox khalife-txt" data-dsn-grid="move-up" class="effect-ajax">
+                                            <h6><a href="#0">Appel 2019</a></h6>
+                                            <h4><a href="project-details.html">Yoor Yoor Diamalaye</a></h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="content wow fadeInUp" data-wow-delay=".3s">
+                                        <div class="item-img bg-img wow imago" data-background="{% static 'assets/img/portfolio/9.jpg' %}">
+                                        </div>
+                                        <div class="img-border"></div>
+                                        <div class="cont bgbox khalife-txt" data-dsn-grid="move-up" class="effect-ajax">
+                                            <h6><a href="#0">Appel 2019</a></h6>
+                                            <h4><a href="project-details2.html">Camberene</a></h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="content wow fadeInUp" data-wow-delay=".3s">
+                                        <div class="item-img bg-img wow imago" data-background="{% static 'assets/img/portfolio/ngor.jpg' %}">
+                                        </div>
+                                        <div class="img-border"></div>
+                                        <div class="cont bgbox  khalife-txt">
+                                            <h6><a href="#0">Appel 2019</a></h6>
+                                            <h4><a href="project-details.html">Ngor</a></h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="content wow fadeInUp" data-wow-delay=".3s">
+                                        <div class="item-img bg-img wow imago" data-background="{% static 'assets/img/portfolio/10.jpg' %}">
+                                        </div>
+                                        <div class="img-border"></div>
+                                        <div class="cont bgbox  khalife-txt">
+                                            <h6><a href="#0">Appel 2019</a></h6>
+                                            <h4><a href="project-details.html">Cérémonie Officielle</a></h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- slider setting -->
+                            <div class="swiper-button-next swiper-nav-ctrl next-ctrl cursor-pointer">
+                                <ion-icon name="chevron-forward-outline"></ion-icon>
+                            </div>
+                            <div class="swiper-button-prev swiper-nav-ctrl prev-ctrl cursor-pointer">
+                                <ion-icon name="chevron-back-outline"></ion-icon>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <!-- ==================== End Works ==================== -->
+
+
+    <!-- ==================== Start Blog ==================== -->
+
+        <section class="blog-grid section-padding">
+            <div class="container">
+                <div class="sec-head custom-font text-center">
+                    <h6 class="fadeIn" data-wow-delay=".5s">أخبار</h6>
+                    <h3 class="wow" data-splitting>Actualités.</h3>
+                    <span class="tbg">Actualités</span>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="item list md-mb50 wow fadeInUp" data-wow-delay=".3s">
+                            <div class="img">
+                                <img src="{% static 'assets/img/blog/01.jpg' %}" alt="">
+                            </div>
+                            <div class="cont">
+                                <a href="#0" class="date custom-font">
+                                    <span><i>06</i> Sept</span>
+                                </a>
+                                <div class="info custom-font">
+                                    <a href="#0" class="author">
+                                        <span>by admin</span>
+                                    </a>
+                                    <a href="#0" class="tag">
+                                        <span>Lorem Upsum</span>
+                                    </a>
+                                </div>
+                                <h6>
+                                    <a href="#0">Lorem ipsum dolor sit amet consectetur 
+                                        adipisicing elit.</a>
+                                </h6>
+                                <div class="btn-more custom-font">
+                                    <a href="#0" class="simple-btn">Voir plus</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="item list md-mb50 wow fadeInUp" data-wow-delay=".5s">
+                            <div class="img">
+                                <img src="{% static 'assets/img/blog/04.jpg' %}" alt="">
+                            </div>
+                            <div class="cont">
+                                <a href="#0" class="date custom-font">
+                                    <span><i>06</i> Sept</span>
+                                </a>
+                                <div class="info custom-font">
+                                    <a href="#0" class="author">
+                                        <span>by admin</span>
+                                    </a>
+                                    <a href="#0" class="tag">
+                                        <span>Lorem Upsum</span>
+                                    </a>
+                                </div>
+                                <h6>
+                                    <a href="#0">Lorem ipsum dolor sit amet consectetur 
+                                        adipisicing elit.</a>
+                                </h6>
+                                <div class="btn-more custom-font">
+                                    <a href="#0" class="simple-btn">Voir plus</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="item list wow fadeInUp" data-wow-delay=".8s">
+                            <div class="img">
+                                <img src="{% static 'assets/img/blog/03.jpg' %}" alt="">
+                            </div>
+                            <div class="cont">
+                                <a href="#0" class="date custom-font">
+                                    <span><i>06</i> Sept</span>
+                                </a>
+                                <div class="info custom-font">
+                                    <a href="#0" class="author">
+                                        <span>by admin</span>
+                                    </a>
+                                    <a href="#0" class="tag">
+                                        <span>Lorem Upsum</span>
+                                    </a>
+                                </div>
+                                <h6>
+                                    <a href="#0">Lorem ipsum dolor sit amet consectetur 
+                                        adipisicing elit. 
+                                    </a>
+                                </h6>
+                                <div class="btn-more custom-font">
+                                    <a href="#0" class="simple-btn">Voir plus</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== End Blog ==================== -->
+
+
+
+        <!-- ==================== Start clients Brands ==================== -->
+
+        <section class="clients-brand section-padding sub-bg-brand">
+            <div class="container">
+                <div class="brands-crs">
+                    <div class="brands">
+                        <div class="item" data-wow-delay=".3s">
+                            <div class="img">
+                                <img src="img/clients/brands/01.png" alt="">
+                            </div>
+                            <a href="#0" class="link" data-splitting>www.layene-digital.com</a>
+                        </div>
+                    </div>
+                    <div class="brands">
+                        <div class="item" data-wow-delay=".6s">
+                            <div class="img">
+                                <img src="img/clients/brands/01.png" alt="">
+                            </div>
+                            <a href="#0" class="link" data-splitting>www.layene-digital.com</a>
+                        </div>
+                    </div>
+                    <div class="brands">
+                        <div class="item" data-wow-delay=".8s">
+                            <div class="img">
+                                <img src="img/clients/brands/01.png" alt="">
+                            </div>
+                            <a href="#0" class="link" data-splitting>www.layene-digital.com</a>
+                        </div>
+                    </div>
+                    <div class="brands">
+                        <div class="item" data-wow-delay=".3s">
+                            <div class="img">
+                                <img src="img/clients/brands/01.png" alt="">
+                            </div>
+                            <a href="#0" class="link" data-splitting>www.layene-digital.com</a>
+                        </div>
+                    </div>
+                    <div class="brands">
+                        <div class="item" data-wow-delay=".4s">
+                            <div class="img">
+                                <img src="img/clients/brands/01.png" alt="">
+                            </div>
+                            <a href="#0" class="link" data-splitting>www.layene-digital.com</a>
+                        </div>
+                    </div>
+                    <div class="brands">
+                        <div class="item" data-wow-delay=".7s">
+                            <div class="img">
+                                <img src="img/clients/brands/01.png" alt="">
+                            </div>
+                            <a href="#0" class="link" data-splitting>www.layene-digital.com</a>
+                        </div>
+                    </div>
+                    <div class="brands">
+                        <div class="item" data-wow-delay=".5s">
+                            <div class="img">
+                                <img src="img/clients/brands/01.png" alt="">
+                            </div>
+                            <a href="#0" class="link" data-splitting>www.layene-digital.com</a>
+                        </div>
+                    </div>
+                    <div class="brands">
+                        <div class="item" data-wow-delay=".3s">
+                            <div class="img">
+                                <img src="img/clients/brands/01.png" alt="">
+                            </div>
+                            <a href="#0" class="link" data-splitting>www.layene-digital.com</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+{% load static %}
+
+
+{% endblock %}

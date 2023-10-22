@@ -1,0 +1,436 @@
+{% extends 'index.html' %}
+
+{% load static %}
+
+{% block content %}
+    <!-- ==================== Start Navbar ==================== -->
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+
+            <!-- Logo -->
+            <a class="logo" href="#">
+                <img src="{% static 'assets/img/Logo-GC.png' %}" alt="logo">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="icon-bar"><i class="fas fa-bars"></i></span>
+            </button>
+
+            <!-- navbar links -->
+            <section id="subheader" class="text-light" data-bgimage="url({% static 'assets/img/blog/01.jpg' %}) bottom">
+                <div class="center-y relative text-center">
+                    <div class="container">
+                        <div class="row">
+                            
+                            <div class="col-md-12 text-center">
+                                <h1>Blog</h1>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+        </div>
+    </nav>
+
+    <!-- ==================== End Navbar ==================== -->
+
+
+
+    <!-- ==================== Start Slider ==================== -->
+
+    <header class="slider slider-prlx fixed-slider text-center">
+        <div class="swiper-container parallax-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="bg-img valign" data-background="{% static 'assets/img/slid/04.jpg' %}" data-overlay-dark="6">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-7 col-md-9">
+                                    <div class="caption center">
+                                        <h1 data-splitting>Lorem <br> Upsum Dolor</h1>
+                                        <p></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="bg-img valign" data-background="{% static 'assets/img/slid/05.jpg' %}" data-overlay-dark="6">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-7 col-md-9">
+                                    <div class="caption center">
+                                        <h1 data-splitting>Lorem <br> Upsum Dolor</h1>
+                                        <p></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="bg-img valign" data-background="{% static 'assets/img/slid/08.jpg' %}" data-overlay-dark="6">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-7 col-md-9">
+                                    <div class="caption center">
+                                        <h1 data-splitting>Lorem <br> Upsum Dolor</h1>
+                                        <p></p>
+                                        <!--<a href="#0" class="btn-curve btn-lit mt-30">
+                                            <span>Look More</span>
+                                        </a>-->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- slider setting -->
+            <div class="setone setwo">
+                <div class="swiper-button-next swiper-nav-ctrl next-ctrl cursor-pointer">
+                    <ion-icon name="chevron-forward-outline"></ion-icon>
+                </div>
+                <div class="swiper-button-prev swiper-nav-ctrl prev-ctrl cursor-pointer">
+                    <ion-icon name="chevron-back-outline"></ion-icon>
+                </div>
+            </div>
+            <div class="swiper-pagination top botm custom-font"></div>
+
+            <div class="social-icon">
+                <a href="#0"><i class="fa fa-facebook-f"></i></a>
+                <a href="#0"><i class="fa fa-twitter"></i></a>
+                <a href="#0"><i class="fa fa-instagram"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==================== End Slider ==================== -->
+    <div class="main-content">
+        <div class="col-md-12">
+            <form name="contactForm" id='contact_form' class="form-border" method="post" action="{% url 'payment_form' %}">
+                {% csrf_token %}
+                <div class="row g-custom-x">
+                    <div class="col-md-12">
+                        <h3>Contactez Nous</h3>
+                    </div>
+                    <div class="col-md-6">
+                        <div id='name_error' class='error'>Please enter your name.</div>
+                        <div>
+                            <input type='text' name='Name' id='name' class="form-control" placeholder="Your Name" required>
+                        </div>
+        
+                        <div id='email_error' class='error'>Please enter your valid E-mail ID.</div>
+                        <div>
+                            <input type='email' name='Email' id='email' class="form-control" placeholder="Your Email" required>
+                        </div>
+        
+                        <div id='phone_error' class='error'>Please enter your phone number.</div>
+                        <div>
+                            <input type='text' name='phone' id='phone' class="form-control" placeholder="Your Phone" required>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div id='message_error' class='error'>Please enter your message.</div>
+                        <div>
+                            <textarea name='message' id='message' class="form-control" placeholder="Your Message" required></textarea>
+                        </div>
+                    </div>
+        
+                    <div class="col-md-12">
+                        <div class="g-recaptcha" data-sitekey="6LdW03QgAAAAAJko8aINFd1eJUdHlpvT4vNKakj6"></div>
+                        <p id='submit' class="mt20">
+                            <input type='submit' id='send_message'  value='Envoyer' class="btn-danger btn-main">
+                        </p>
+                        <div id='mail_success' class='success'>Your message has been sent successfully.</div>
+                        <div id='mail_fail' class='error'>Sorry, error occurred this time sending your message.</div>
+                    </div>
+                </div>
+            </form>
+        
+            <div id="success_message" class='success'>
+                Your message has been sent successfully. Refresh this page if you want to send more messages.
+            </div>
+            <div id="error_message" class='error'>
+                Sorry, there was an error sending your form.
+            </div>
+        </div>
+        
+        <!-- ==================== Start about ==================== -->
+
+        <div class="about section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5">
+                        <div class="img-mons">
+                            <div class="row">
+                                <div class="col-md-5 cmd-padding valign">
+                                    <div class="img1 wow imago" data-wow-delay=".5s">
+                                        <img src="{% static 'assets/img/intro/1.jpg' %}" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-md-7 cmd-padding">
+                                    <div class="img2 wow imago" data-wow-delay=".3s">
+                                        <img src="{% static 'assets/img/intro/3.jpg' %}" alt="">
+                                    </div>
+                                    <div class="img3 wow imago" data-wow-delay=".8s">
+                                        <img src="{% static 'assets/img/intro/2.jpg' %}" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 offset-lg-1 valign">
+                        <div class="content">
+                            <div class="sub-title">
+                                <h6>تاريخي</h6>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <h3 class="main-title wow" data-splitting>Histoire de la <br> communauté layene.</h3>
+                            <p class="wow txt" data-splitting>Au nom d’Allah le Miséricordieux et le très Miséricordieux Le dimanche matin premier (1er) Chaban 1301 de l'hégire.
+                                , à Yoff dans la presqu’île du Cap-Vert, à la pointe la plus occidentale de l’Afrique, le Saint Maître Seydina Limamou Lahi (PSL) lançait à l’âge de quarante (40) ans son appel à l’endroit des hommes et des Djinns, 
+                                se déclarant être le Mahdi attendu à la fin des temps pour la restauration de l’orthodoxie musulmane. 
+                                "ADJIBO DAHIYA LAYE YA MAHCHARAL INS WAL DJIN INI RAASOULOULAHI ILEYKOUM" : (“Venez à l'appel de Dieu vous, hommes et djinns, je suis l'envoyé de Dieu").</p>
+                                <a href="pages/historique.html" class="btn-curve btn-lit mt-30">
+                                    <span>Voir plus</span>
+                                </a>
+                            <!--<div class="ftbox mt-30">
+                                <ul>
+                                    <li class="wow fadeIn" data-wow-delay=".3s">
+                                        <span class="icon pe-7s-gleam"></span>
+                                        <h6 class="custom-font">Pixel <br> Perfect</h6>
+                                        <div class="dots">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </div>
+                                    </li>
+                                    <li class="space wow fadeIn" data-wow-delay=".5s">
+                                        <span class="icon pe-7s-paint-bucket"></span>
+                                        <h6 class="custom-font">Creative <br> Design</h6>
+                                        <div class="dots">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </div>
+                                    </li>
+                                    <li class="wow fadeIn" data-wow-delay=".8s">
+                                        <span class="icon pe-7s-medal"></span>
+                                        <h6 class="custom-font">Heigh <br> Perfomance</h6>
+                                        <div class="dots">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <!-- ==================== End about ==================== -->
+
+    <!-- ==================== Start testimonials ==================== -->
+
+
+
+    <!-- ==================== End block-sec ==================== -->
+
+    <!-- ==================== Start Services ==================== -->
+
+
+        <!-- ==================== End Services ==================== -->
+
+
+        <!-- ==================== Start Works ==================== -->
+
+
+    <!-- ==================== End Works ==================== -->
+
+
+    <!-- ==================== Start Blog ==================== -->
+
+        <section class="blog-grid section-padding">
+            <div class="container">
+                <div class="sec-head custom-font text-center">
+                    <h6 class="fadeIn" data-wow-delay=".5s">أخبار</h6>
+                    <h3 class="wow" data-splitting>Actualités.</h3>
+                    <span class="tbg">Actualités</span>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="item list md-mb50 wow fadeInUp" data-wow-delay=".3s">
+                            <div class="img">
+                                <img src="{% static 'assets/img/blog/01.jpg' %}" alt="">
+                            </div>
+                            <div class="cont">
+                                <a href="#0" class="date custom-font">
+                                    <span><i>06</i> Sept</span>
+                                </a>
+                                <div class="info custom-font">
+                                    <a href="#0" class="author">
+                                        <span>by admin</span>
+                                    </a>
+                                    <a href="#0" class="tag">
+                                        <span>Lorem Upsum</span>
+                                    </a>
+                                </div>
+                                <h6>
+                                    <a href="#0">Lorem ipsum dolor sit amet consectetur 
+                                        adipisicing elit.</a>
+                                </h6>
+                                <div class="btn-more custom-font">
+                                    <a href="#0" class="simple-btn">Voir plus</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="item list md-mb50 wow fadeInUp" data-wow-delay=".5s">
+                            <div class="img">
+                                <img src="{% static 'assets/img/blog/04.jpg' %}" alt="">
+                            </div>
+                            <div class="cont">
+                                <a href="#0" class="date custom-font">
+                                    <span><i>06</i> Sept</span>
+                                </a>
+                                <div class="info custom-font">
+                                    <a href="#0" class="author">
+                                        <span>by admin</span>
+                                    </a>
+                                    <a href="#0" class="tag">
+                                        <span>Lorem Upsum</span>
+                                    </a>
+                                </div>
+                                <h6>
+                                    <a href="#0">Lorem ipsum dolor sit amet consectetur 
+                                        adipisicing elit.</a>
+                                </h6>
+                                <div class="btn-more custom-font">
+                                    <a href="#0" class="simple-btn">Voir plus</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="item list wow fadeInUp" data-wow-delay=".8s">
+                            <div class="img">
+                                <img src="{% static 'assets/img/blog/03.jpg' %}" alt="">
+                            </div>
+                            <div class="cont">
+                                <a href="#0" class="date custom-font">
+                                    <span><i>06</i> Sept</span>
+                                </a>
+                                <div class="info custom-font">
+                                    <a href="#0" class="author">
+                                        <span>by admin</span>
+                                    </a>
+                                    <a href="#0" class="tag">
+                                        <span>Lorem Upsum</span>
+                                    </a>
+                                </div>
+                                <h6>
+                                    <a href="#0">Lorem ipsum dolor sit amet consectetur 
+                                        adipisicing elit. 
+                                    </a>
+                                </h6>
+                                <div class="btn-more custom-font">
+                                    <a href="#0" class="simple-btn">Voir plus</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== End Blog ==================== -->
+
+
+
+        <!-- ==================== Start clients Brands ==================== -->
+
+        <section class="clients-brand section-padding sub-bg-brand">
+            <div class="container">
+                <div class="brands-crs">
+                    <div class="brands">
+                        <div class="item" data-wow-delay=".3s">
+                            <div class="img">
+                                <img src="img/clients/brands/01.png" alt="">
+                            </div>
+                            <a href="#0" class="link" data-splitting>www.layene-digital.com</a>
+                        </div>
+                    </div>
+                    <div class="brands">
+                        <div class="item" data-wow-delay=".6s">
+                            <div class="img">
+                                <img src="img/clients/brands/01.png" alt="">
+                            </div>
+                            <a href="#0" class="link" data-splitting>www.layene-digital.com</a>
+                        </div>
+                    </div>
+                    <div class="brands">
+                        <div class="item" data-wow-delay=".8s">
+                            <div class="img">
+                                <img src="img/clients/brands/01.png" alt="">
+                            </div>
+                            <a href="#0" class="link" data-splitting>www.layene-digital.com</a>
+                        </div>
+                    </div>
+                    <div class="brands">
+                        <div class="item" data-wow-delay=".3s">
+                            <div class="img">
+                                <img src="img/clients/brands/01.png" alt="">
+                            </div>
+                            <a href="#0" class="link" data-splitting>www.layene-digital.com</a>
+                        </div>
+                    </div>
+                    <div class="brands">
+                        <div class="item" data-wow-delay=".4s">
+                            <div class="img">
+                                <img src="img/clients/brands/01.png" alt="">
+                            </div>
+                            <a href="#0" class="link" data-splitting>www.layene-digital.com</a>
+                        </div>
+                    </div>
+                    <div class="brands">
+                        <div class="item" data-wow-delay=".7s">
+                            <div class="img">
+                                <img src="img/clients/brands/01.png" alt="">
+                            </div>
+                            <a href="#0" class="link" data-splitting>www.layene-digital.com</a>
+                        </div>
+                    </div>
+                    <div class="brands">
+                        <div class="item" data-wow-delay=".5s">
+                            <div class="img">
+                                <img src="img/clients/brands/01.png" alt="">
+                            </div>
+                            <a href="#0" class="link" data-splitting>www.layene-digital.com</a>
+                        </div>
+                    </div>
+                    <div class="brands">
+                        <div class="item" data-wow-delay=".3s">
+                            <div class="img">
+                                <img src="img/clients/brands/01.png" alt="">
+                            </div>
+                            <a href="#0" class="link" data-splitting>www.layene-digital.com</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+{% load static %}
+
+
+{% endblock %}

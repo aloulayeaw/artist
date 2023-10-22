@@ -1,0 +1,1548 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+        <title>KEULTHIEU THE NAME</title>    
+        <link rel="icon" href="images/icon.png" type="image/gif" sizes="16x16">
+        <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <meta content="Rockfest - Music Festival Event, DJ Concert and Night Club Website Template" name="description" />
+        <meta content="" name="keywords" />
+        <meta content="" name="author" />
+        <!-- CSS Files
+        ================================================== -->
+        <link id="bootstrap" href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" type="text/css" />
+        <link id="bootstrap-grid" href="{% static 'css/bootstrap-grid.min.css' %}" rel="stylesheet" type="text/css" />
+        <link id="bootstrap-reboot" href="{% static 'css/bootstrap-reboot.min.css' %}" rel="stylesheet" type="text/css" />
+        <link href="{% static 'css/animate.css' %}" rel="stylesheet" type="text/css" />
+        <link href="{% static 'css/owl.carousel.css' %}" rel="stylesheet" type="text/css" />
+        <link href="{% static 'css/owl.theme.css' %}" rel="stylesheet" type="text/css" />
+        <link href="{% static 'css/owl.transitions.css' %}" rel="stylesheet" type="text/css" />
+        <link href="{% static 'css/magnific-popup.css' %}" rel="stylesheet" type="text/css" />
+        <link href="{% static 'css/jquery.countdown.css' %}" rel="stylesheet" type="text/css" />
+        <link id="mdb" href="{% static 'css/mdb.min.css' %}" rel="stylesheet" type="text/css" />
+        <link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css" />
+        <!-- color scheme -->
+        <link id="colors" href="{% static 'css/colors/scheme-01.css' %}" rel="stylesheet" type="text/css" />
+        <link href="{% static 'css/coloring.css' %}" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>    
+        <script src="https://js.stripe.com/v3/"></script>
+    </head>
+
+<body class="dark-scheme">
+    <div id="wrapper">
+        <div id="preloader">
+            <div class="preloader1"></div>
+        </div>
+
+        {% include 'includes/navbar.html' %}
+
+        <!-- content begin -->
+        <div class="no-bottom no-top" id="content">
+            <div id="top"></div>
+            <!-- Carousel wrapper -->
+            <section id="de-carousel" class="no-top no-bottom carousel slide carousel-fade shadow-2-strong" data-mdb-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-mdb-target="#de-carousel" data-mdb-slide-to="0" class="active"></li>
+                    <li data-mdb-target="#de-carousel" data-mdb-slide-to="1"></li>
+                    <li data-mdb-target="#de-carousel" data-mdb-slide-to="2"></li>
+                </ol>
+                <!-- Inner -->
+                <div class="carousel-inner">
+                    <!-- Single item -->
+                    <div class="carousel-item active" data-bgimage="url({% static 'images/Pictures/Sakoura-584.jpg' %})">
+                        <div class="mask">
+                            <div class="d-flex justify-content-center align-items-center h-100">
+                                <div class="container text-white text-center">
+                                    <div class="row">
+                                        <div class="col-md-6 offset-md-3">
+                                            <h1 class="mb-3 wow fadeInUp">Artiste Rappeur</h1>
+                                            <h2 style="font-size: 20px;" class="lead wow fadeInUp" data-wow-delay=".3s">Keulthieu The Name</h2>
+                                            <div class="spacer-10"></div>
+                                            <br>
+                                            <a href="#section-artists" class="btn-main wow fadeInUp" data-wow-delay=".6s">Voir Plus</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Single item -->
+                    <div class="carousel-item" data-bgimage="url({% static 'images/Pictures/IMG_20230921_192735_095.jpg' %})">
+                        <div class="mask">
+                            <div class="d-flex justify-content-center align-items-center h-100 wow f">
+                                <div class="container text-white text-center">
+                                    <div class="row">
+                                        <div class="col-md-6 offset-md-3">
+                                            <h1 class="mb-3 wow fadeInUp">Back to the future</h1>
+                                            <h2 style="font-size: 20px;" class="lead wow fadeInUp" data-wow-delay=".3s">À la guerre comme à la guerre</h2>
+                                            <div class="spacer-10"></div>
+                                            <br>
+                                            <a href="#section-artists" class="btn-main wow fadeInUp" data-wow-delay=".6s">Voir Plus</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Inner -->
+                <!-- Controls -->
+                <a class="carousel-control-prev" href="#de-carousel" role="button" data-mdb-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#de-carousel" role="button" data-mdb-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </section>
+
+            
+            {% comment %} <section id="section-date">
+                <div class="container">
+                    <div class="row g-custom-x align-items-center">
+                        <h2 style="text-align: center;" class="wow fadeInUp" data-wow-delay="0s">News</h2>
+                        <br>
+                        <div class="col-md-7">
+                            <iframe width="570" height="415" src="https://www.youtube.com/embed/SrKEIJwNBsw?si=_wrfyQ3ReKKSYGat" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                        <div class="col-md-5">
+                            <p style="" class="id-color">Back to the future - Out Now 🚨
+
+                                Disponible partout
+                                Check ce lien 👇
+                                <br><br>
+                                https://youtu.be/SrKEIJwNBsw?si=3XcaC9QrCvRRq4qC
+                                
+                                <br><br>
+                                Let's Go stream my Gs! <br><br>
+                                
+                                Directed by @kainri_pictures
+                                Prod by @freshii808beatz_officiel
+                                Studio @all_vibes_music_
+                                Accessories by @221__luxury
+                                
+                                <br><br>
+                                
+                                Thank you Fam' 🏴‍☠️ 🔥 
+                                Keumeufeu🔥</p>
+                        </div>
+                    </div>                
+                </div>
+            </section> {% endcomment %}
+            {% comment %} <!-- Carousel wrapper -->
+            <section id="section-date">
+                <div class="container">
+                    <div class="row g-custom-x align-items-center">
+                        <div class="col-md-12">
+                            <div class="text-center">
+                                <h2 class="wow fadeInUp" data-wow-delay="0s">News</h2>
+                                <h3 class="wow fadeInUp" data-wow-delay=".2s"><span class="id-color"></h3>
+                                
+                                    <div class="col-md-6">
+                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/SrKEIJwNBsw?si=_wrfyQ3ReKKSYGat" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <span>
+                                            <p>Back to the future - Out Now 🚨 Disponible partout Check ce lien 👇 https://youtu.be/SrKEIJwNBsw?si=3XcaC9QrCvRRq4qC</p>
+                                            <p>Let's Go stream my Gs!</p>
+                                            <p>Directed by @kainri_pictures</p>
+                                            <p>Prod by @freshii808beatz_officiel</p>
+                                            <p>Studio @all_vibes_music_</p>
+                                            <p>Accessories by @221__luxury</p>
+                                            <p>Thank you Fam' 🏴‍☠️ 🔥 Keumeufeu🔥</p>
+                                        </span>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Carousel wrapper --> {% endcomment %}
+            <section id="section-date">
+                <div class="container">
+                    <div class="row g-custom-x align-items-center" >
+                        <div class="col-lg-12">
+                            <div class="text-center">
+                                <h2 class="wow fadeInUp" data-wow-delay="0s">A Propos de Moi</h2>
+                                {% comment %} <h3 class="wow fadeInUp" data-wow-delay=".2s"><span class="id-color">Allegiant Stadium, Las Vegas, NV, United States</span> {% endcomment %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            {% comment %} <section id="section-artists">
+                <div class="container">
+                    <div class="row g-custom-x align-items-center">
+                        <div class="col-lg-12">
+                            <div class="text-center">
+                                <div class="wm wow slideInUp">Artists</div>
+                                <h2 class="wow fadeInUp" data-wow-delay=".2s"><span class="id-color">01</span> Artists</h2>
+                                <div class="small-border bg-color-2"></div>
+                                <div class="spacer-single"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="de-image-text s2 wow flipInY">
+                                <a href="#" class="d-text">
+                                    <iframe width="570" height="415" src="https://www.youtube.com/embed/SrKEIJwNBsw?si=_wrfyQ3ReKKSYGat" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                </a>
+                                <img src="{% static 'images/misc/featured-1.jpg' %}" class="img-fluid" alt="">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="de-image-text s2 wow flipInY">
+                                <a href="#" class="d-text">
+                                    <h3>Guns n Roses</h3>
+                                </a>
+                                <img src="images/misc/featured-2.jpg" class="img-fluid" alt="">
+                            </div>
+                        </div>
+                        {% comment %} <div class="col-md-4">
+                            <div class="de-image-text s2 wow flipInY">
+                                <a href="#" class="d-text">
+                                    <h3>Pearl Jam</h3>
+                                </a>
+                                <img src="images/misc/featured-3.jpg" class="img-fluid" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-10 offset-md-1 text-center">
+                            <div class="spacer-single"></div>
+                            <ul class="list-inline-style-1">
+                                <li>Halestorm</li>
+                                <li>Chevelle</li>
+                                <li>Joan Jett</li>
+                                <li>In This Moment</li>
+                                <li>The Hives</li>
+                                <li>Gojira</li>
+                                <li>The Distillers</li>
+                                <li>Action Bronson</li>
+                                <li>The Struts</li>
+                                <li>Refused</li>
+                                <li>Killswitch Engage</li>
+                                <li>Parkway Drive</li>
+                                <li>Beartooth</li>
+                                <li>Scars on Broadway</li>
+                                <li>Architects</li>
+                                <li>Tom Morrelo</li>
+                                <li>Avatar</li>
+                                <li>Bad Wolves</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section> {% endcomment %}
+
+			<section aria-label="section" style="margin-top: -75px;">
+                <div class="container">
+                    <div class="row g-custom-x">
+                        <div class="col-lg-6 col-md-6 mb20">
+                            <div class="de-event-item">
+                                    <div class="d-content">
+                                        <div class="d-image">
+                                            <span class="d-image-wrap"><img alt="" src="{% static 'images/2.jpeg' %}" class="lazy"></span>
+                                            {% comment %} <span class="d-date">
+                                                <span class="d-mm">Nov</span>
+                                                <span class="d-dd">28</span>
+                                            </span> {% endcomment %}
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+                        
+                        <div class="col-lg-6 col-md-6 mb20">
+                            <div class="de-event-item">
+                                    {% comment %} <div class="d-content">
+                                        <div class="d-image">
+                                            <span class="d-image-wrap"><img alt="" src="images/blog/2.jpg" class="lazy"></span>
+                                            <span class="d-date">
+                                                <span class="d-mm">Dec</span>
+                                                <span class="d-dd">01</span>
+                                            </span>
+                                        </div> {% endcomment %}
+                                        <div class="d-text">                                                 
+                                            <h2 class="wow fadeInUp" data-wow-delay="0s">Keulthieu The Name</h2> 
+                                            <br>                                     
+                                            <p style="text-align: justify; font-size: 16px;">Né à Tamba, j'ai grandi dans le quartier de la médina à Dakar, avant de déménager à Grand-Mbao. Dès mon jeune âge,
+                                                le rap a captivé mon attention, nourrissant mon amour pour les rythmes percutants et les paroles profondes. 
+                                                <br><br><br>Sous l'influence de mes aînés, 
+                                                dont l'un était manager du groupe Sen Kumpë, j'ai plongé dans le tissu créatif du Hip-Hop Galsen, développant une passion profonde pour cette forme artistique.
+                                                Mon voyage artistique a débuté il y a sept ans, en écrivant des poèmes et des vers dans mes cahiers.
+                                                <br> <br><br> J'ai vite compris que je pouvais façonner mes émotions en musique, naissant ainsi mon désir de m'immerger dans le monde du rap.<br> Ce chemin m'a guidé vers des collaborations avec des amis rappeurs, affinant mon style et consolidant les bases de ma future carrière...
+                                            </p>      
+                                            <button class="btn-main wow fadeInUp" data-wow-delay=".6s" data-toggle="modal" data-target="#popupModal">Lire Plus</button>
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+                    
+
+
+
+                        <div class="modal fade" id="popupModal">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h4 class="modal-title">Keulthieu The Name</h4>
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p style="text-align: justify; font-size: 16px;">Après avoir forgé mon identité artistique, j'ai lancé mon premier single, amorçant une aventure passionnante dans l'univers du rap. <br>Tout en étudiant la gestion de projet multimédia, j'ai pris le pari audacieux de m'investir pleinement dans la musique, tout en exerçant le rôle de Chef de Projet et de Designer. L'année dernière, j'ai dévoilé "Empreinte", mon premier projet : un EP de 5 titres. Aujourd'hui, je vous invite à plonger dans mon histoire et mon vécu à travers mes mots et mélodies.
+                                        <br><br>
+                                        Mes racines, expériences, personnalité et aspirations s'entremêlent dans ma musique. Avec enthousiasme, je vous présente "Demb Ak Tay", ma prochaine Mixtape. Cette œuvre reflète ma passion, mon engagement et mon authenticité. C'est un honneur de partager cette étape majeure de mon parcours avec vous. J'ai hâte de vous immerger dans mon univers musical et de vous révéler l'âme qui anime chaque morceau de cette Mixtape.
+                                        <br><br>
+                                        "Demb Ak Tay" signifie "Hier et Aujourd'hui" en wolof.
+                                        <br><br>
+                                        Ce projet incarne une fusion unique d'émotions, de vécus, de motivations et de spiritualité. C'est une synergie d'egotrip, de vibes, d'écriture et de prises de conscience, créant un dialogue avec les souvenirs passés.
+                                        <br><br>
+                                        "Demb Ak Tay" vous invite à entreprendre un voyage à travers nos expériences antérieures et celles qui éclairent notre présent. Cette création artistique incarne la somme de toutes les expériences qui ont façonné l'individu que je suis aujourd'hui, une consolidation de vécus qui ont contribué à ma personnalité actuelle.
+                                        <br><br>
+                                        Je vous remercie sincèrement pour votre intérêt et votre soutien. J'ai hâte de vous faire voyager à travers ma musique dans les jours à venir.
+                                        </p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        {% comment %} <div class="col-lg-4 col-md-6 mb20">
+                            <div class="de-event-item">
+                                    <div class="d-content">
+                                        <div class="d-image">
+                                            <span class="d-image-wrap"><img alt="" src="images/blog/3.jpg" class="lazy"></span>
+                                            <span class="d-date">
+                                                <span class="d-mm">Dec</span>
+                                                <span class="d-dd">15</span>
+                                            </span>
+                                        </div>
+                                        <div class="d-text">                                            
+                                            <a href="01_rockfest-blog-single.html"><h4>Latching aphagia prostatelcosis gadolinium hemikaryon aftergrief ventricumbent Swab</h4></a>
+                                            <p>Dolore officia sint incididunt non excepteur ea mollit commodo ut enim reprehenderit cupidatat labore ad laborum consectetur consequat...</p>       
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+                        
+                        <div class="col-lg-4 col-md-6 mb20">
+                            <div class="de-event-item">
+                                    <div class="d-content">
+                                        <div class="d-image">
+                                            <span class="d-image-wrap"><img alt="" src="images/blog/4.jpg" class="lazy"></span>
+                                            <span class="d-date">
+                                                <span class="d-mm">Jan</span>
+                                                <span class="d-dd">02</span>
+                                            </span>
+                                        </div>
+                                        <div class="d-text">                                            
+                                            <a href="01_rockfest-blog-single.html"><h4>Thermodynamicist aeolistic lipsanotheca nearaway Tamworth pycnid subtower</h4></a>
+                                            <p>Dolore officia sint incididunt non excepteur ea mollit commodo ut enim reprehenderit cupidatat labore ad laborum consectetur consequat...</p>       
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+                        
+                        <div class="col-lg-4 col-md-6 mb20">
+                        <div class="de-event-item">
+                                    <div class="d-content">
+                                        <div class="d-image">
+                                            <span class="d-image-wrap"><img alt="" src="images/blog/5.jpg" class="lazy"></span>
+                                            <span class="d-date">
+                                                <span class="d-mm">Jan</span>
+                                                <span class="d-dd">20</span>
+                                            </span>
+                                        </div>
+                                        <div class="d-text">                                            
+                                            <a href="01_rockfest-blog-single.html"><h4>Unpresumptuously carnelian trochiscus echoic enmask myodynamiometer</h4></a>
+                                            <p>Dolore officia sint incididunt non excepteur ea mollit commodo ut enim reprehenderit cupidatat labore ad laborum consectetur consequat...</p>
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+                        
+                        <div class="col-lg-4 col-md-6 mb20">
+                            <div class="de-event-item">
+                                    <div class="d-content">
+                                        <div class="d-image">
+                                            <span class="d-image-wrap"><img alt="" src="images/blog/6.jpg" class="lazy"></span>
+                                            <span class="d-date">
+                                                <span class="d-mm">Feb</span>
+                                                <span class="d-dd">01</span>
+                                            </span>
+                                        </div>
+                                        <div class="d-text">                                            
+                                            <a href="01_rockfest-blog-single.html"><h4>Statesmanese pseudhemal steatite Wendish boxhaul equiprobability xylonic</h4></a>
+                                            <p>Dolore officia sint incididunt non excepteur ea mollit commodo ut enim reprehenderit cupidatat labore ad laborum consectetur consequat...</p>       
+                                        </div>
+                                    </div>
+                                </div>
+                        </div> {% endcomment %}
+
+                        {% comment %} <div class="spacer-single"></div>
+                                
+                        <nav aria-label="Page navigation example">
+                          <ul class="pagination justify-content-center">
+                            <li class="page-item disabled">
+                              <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                            </li>
+                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                              <a class="page-link" href="#">Next</a>
+                            </li>
+                          </ul>
+                        </nav> {% endcomment %}
+                        
+                    </div>
+                </div>
+            </section>
+            <section id="section-date">
+                <div class="container">
+                    <div class="row g-custom-x align-items-center" >
+                        <div class="col-lg-12">
+                            <div class="text-center">
+                                <div class="wm wow slideInUp">Derniers News</div>
+                                <h2 class="wow fadeInUp" data-wow-delay="0.5s">Derniers News</h2>
+                                {% comment %} <h3 class="wow fadeInUp" data-wow-delay=".2s"><span class="id-color">Allegiant Stadium, Las Vegas, NV, United States</span> {% endcomment %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            {% comment %} <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <img alt="" style="width: 100%;height: 1200px;" src="{% static 'cover/KEULTHIEU DAT COVER Dédicaces.png' %}" class="">
+                    </div>
+                </div>
+            </div> {% endcomment %}
+{% comment %} Slide pour les 3 videos {% endcomment %}
+            <div class="row">
+                <div class="slide">
+                    <div class="container">
+                        <div class="col-lg-12 col-md-12 mb-20">
+                            <div class="de-event-item text-center">
+                                <div class="d-text position-relative">
+                                    <iframe id="videoFrame1" width="100%" height="715" src="https://www.youtube.com/embed/_G96gaEIaOo?si=4ctKDpZz1tS4RdAE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                    <div class="col-md-7 text-right">
+                                        <p></p>
+                                    </div>
+                                    <div class="col-md-3 text-right">
+                                        <p></p>
+                                    </div>
+                                    <div class="col-md-2 text-left">
+                                        <a href="https://www.youtube.com/@KeulthieuTheName/about" target="_blank">
+                                            <img alt="" src="{% static 'images/profile.jpg' %}" class="lazy" style="border-radius: 120px; cursor: pointer;width: 55px;">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <div class="container">
+                        <div class="col-lg-12 col-md-12 mb-20">
+                            <div class="de-event-item text-center">
+                                <div class="d-text position-relative">
+                                    <iframe id="videoFrame2" width="100%" height="715" src="https://www.youtube.com/embed/FCVlQvjSvOQ?si=bpNsuLN2eaBNRnsL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                    <div class="col-md-7 text-right">
+                                        <p></p>
+                                    </div>
+                                    <div class "col-md-3 text-right">
+                                        <p></p>
+                                    </div>
+                                    <div class="col-md-2 text-left">
+                                        <a href="https://www.youtube.com/@KeulthieuTheName/about" target="_blank">
+                                            <img alt="" src="{% static 'images/profile.jpg' %}" class="lazy" style="border-radius: 120px; cursor: pointer;width: 55px;">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {% comment %} <div class="controls">
+                <button onclick="plusSlides(-1)">Précédent</button>
+                <button onclick="plusSlides(1)">Suivant</button>
+            </div> {% endcomment %}
+
+            {% comment %} <script>
+                var slideIndex = 1;
+                showSlides(slideIndex);
+            
+                function plusSlides(n) {
+                    showSlides(slideIndex += n);
+                }
+            
+                function showSlides(n) {
+                    var i;
+                    var slides = document.getElementsByClassName("slide");
+                    if (n > slides.length) {
+                        slideIndex = 1;
+                    }
+                    if (n < 1) {
+                        slideIndex = slides.length;
+                    }
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";
+                    }
+                    while (slides[slideIndex - 1].querySelector('iframe') === null) {
+                        slideIndex++;
+                        if (slideIndex > slides.length) {
+                            slideIndex = 1;
+                        }
+                    }
+                    slides[slideIndex - 1].style.display = "block";
+                }
+            </script> {% endcomment %}
+
+            <script>
+                // Fonction pour modifier le texte de légende de la vidéo
+                function updateVideoText(newText) {
+                    document.getElementById("videoText").textContent = newText;
+                }
+            
+                // Exemple d'utilisation : pour changer le texte de légende
+                updateVideoText("Back to the future - Out Now ");
+            </script>
+
+            <div class="container" style="background-color: black; color: white; padding: 20px; border-radius: 20px; box-shadow: 0 0 10px rgba(0,0,0,0.5);" data-bgimage="url({% static 'ktn/TrackList.png' %})">
+                <section id="section-date">
+                    <div class="container">
+                        <div class="row g-custom-x align-items-center" >
+                            <div class="col-lg-12">
+                                <div class="text-center">                                    
+                                <div class="wm wow slideInUp">Ma Boutique</div>
+                                    <h2 class="wow fadeInUp" data-wow-delay="0.5s">Ma Boutique</h2>
+                                    {% comment %} <h3 class="wow fadeInUp" data-wow-delay=".2s"><span class="id-color">Allegiant Stadium, Las Vegas, NV, United States</span> {% endcomment %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div class="container">
+                    <div class="row">
+                        {% comment %} <div class="col-md-6">
+                            <img alt="" style="width: 100%; height: 700px;" src="{% static 'cover/KEULTHIEU DAT - COVER back.png' %}" class="">
+                        </div> {% endcomment %}
+                        <div class="col-md-12">
+                            <img alt="" style="width: 100%; border-radius: 15px;" src="{% static 'cover/KEULTHIEU DAT - COVER.png' %}" class="">
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="row" style="padding: -15px;">
+                        <div class="container" style="background-image: url('{% static 'cover/KEULTHIEU DAT - COVER back-fotor-2023102210167.png' %}'); padding: 15px; border-radius: 15px;height: 100%;">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <img alt="" style="width: 380px; height: 390px; border-radius: 750px;" src="{% static 'cover/KEULTHIEU DAT - COVER.png' %}" class="">
+                                </div>
+                                <div class="col-md-6">
+                                    <audio id="audioPlayer">
+                                        <source src="{% static 'DAT/1-Lepp li ma life  .wav' %}" type="audio/wav">
+                                        <source src="{% static 'DAT/2-Let em talk .wav' %}" type="audio/wav">
+                                        <source src="{% static 'DAT/3-Jambar .wav' %}" type="audio/wav">
+                                        <source src="{% static 'DAT/4-Mane feat Gunmor .wav' %}" type="audio/wav">
+                                        <source src="{% static 'DAT/5-Leer .wav' %}" type="audio/wav">
+                                        <source src="{% static 'DAT/6-Do you know .wav' %}" type="audio/wav">
+                                        <source src="{% static 'DAT/7-Interlude .wav' %}" type="audio/wav">
+                                        <source src="{% static 'DAT/8-Baay.wav' %}" type="audio/wav">
+                                        <source src="{% static 'DAT/9-Buurba.wav' %}" type="audio/wav">
+                                        <source src="{% static 'DAT/10-No weakness .wav' %}" type="audio/wav">
+                                        <source src="{% static 'DAT/11-For The Culture Part II.wav' %}" type="audio/wav">
+                                        <source src="{% static 'DAT/12-Yone bi Feat Mgeey .wav' %}" type="audio/wav">
+                                        <source src="{% static 'DAT/13-Free .wav' %}" type="audio/wav">
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                    <div class="d-flex justify-content-center">
+                                        <button id="playButton" class="audio-control-button">
+                                            <img style="width: 20px; height: 30px;" src="{% static 'images/play.png' %}" alt="Play">
+                                        </button>
+                                        <button id="pauseButton" class="audio-control-button">
+                                            <img style="width: 20px; height: 30px;" src="{% static 'images/pause.png' %}" alt="Pause">
+                                        </button>
+                                        <button id="nextButton" class="audio-control-button">
+                                            <img style="width: 20px; height: 30px;" src="{% static 'images/next.png' %}" alt="Pause">
+                                        </button>
+                                        <div style="background-color: black;width: 100%; height: 30px;" id="progressContainer">
+                                            <div id="progressBar"></div>
+                                        </div>
+                                        <span style="color: black; padding-left: 5px;" id="currentTime" >0:00</span> <span style="color: black;" >/</span> <span id="duration" style="color: black;" >0:00</span>
+                                    </div>
+                                    
+                                    
+                                    {% comment %} <button id="stopButton" class="btn btn-danger">Arrêter</button> {% endcomment %}
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <ul id="playlist" class="list-group mt-3" style="border-radius: 7px;">
+                                                <li class="list-group-item song" data-src="{% static 'DAT/1-Lepp li ma life  .wav' %}">1-Lepp li ma life</li>
+                                                <li class="list-group-item song" data-src="{% static 'DAT/2-Let em talk .wav' %}">2 - Let em talk</li>
+                                                <li class="list-group-item song" data-src="{% static 'DAT/3-Jambar .wav' %}">3 - Jambar</li>
+                                                <li class="list-group-item song" data-src="{% static 'DAT/5-Leer .wav' %}">5 - Leer</li>
+                                                <li class="list-group-item song" data-src="{% static 'DAT/6-Do you know .wav' %}">6 - Do you know</li>
+                                                <li class="list-group-item song" data-src="{% static 'DAT/7-Interlude .wav' %}">7 - Interlude</li>
+                                                
+                                                <!-- Ajoutez ici plus de chansons avec des balises li similaires -->
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <ul id="playlist" class="list-group mt-3" style="border-radius: 7px;">
+                                                <li class="list-group-item song" data-src="{% static 'DAT/8-Baay.wav' %}">8 - Baay</li>
+                                                <li class="list-group-item song" data-src="{% static 'DAT/9-Buurba.wav' %}">9 - Buurba</li>
+                                                <li class="list-group-item song" data-src="{% static 'DAT/10-No weakness .wav' %}">10 - No weakness</li>
+                                                <li class="list-group-item song" data-src="{% static 'DAT/11-For The Culture Part II.wav' %}">11 - For The Culture Part II</li>
+                                                <li class="list-group-item song" data-src="{% static 'DAT/12-Yone bi Feat Mgeey .wav' %}">12 - Yone bi Feat Mgeey</li>
+                                                <li class="list-group-item song" data-src="{% static 'DAT/13-Free .wav' %}">13 - Free</li>
+                                                <!-- Ajoutez ici plus de chansons avec des balises li similaires -->
+                                            </ul>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <!-- Bouton pour afficher le popup -->
+                    <div class="col-md-12 text-center">
+                        <a data-toggle="modal" data-target="#myNewModal">
+                            <br><br>
+                            <button style="background-color: #a8561d" class="btn btn-danger">Précommander l'Album</button>
+                        </a>
+                    </div>
+                    
+                    <!-- Code du nouveau popup modal -->
+                    <div class="modal fade" id="myNewModal" tabindex="-1" role="dialog" aria-labelledby="myNewModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h4 class="modal-title" id="myNewModalLabel">Nouveau Album</h4>
+                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="col-md-12">
+                                        <form name="contactForm" id='' class="form-border" method="post" action="{% url 'payment_form' %}">
+                                            {% csrf_token %}
+                                            <div class="row g-custom-x">
+                                                <div class="col-md-12">
+                                                    {% comment %} <h3>Contactez Nous</h3> {% endcomment %}
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div id='name_error' class='error'>Please enter your name.</div>
+                                                    <div>
+                                                        <input type='text' name='Name' id='name' class="form-control" placeholder="Nom et Prenom" required>
+                                                    </div>
+                                    
+                                                    <div id='email_error' class='error'>Please enter your valid E-mail ID.</div>
+                                                    <div>
+                                                        <input type='email' name='Email' id='email' class="form-control" placeholder="Email" required>
+                                                    </div>
+                                    
+                                                    <div id='phone_error' class='error'>Please enter your phone number.</div>
+                                                    <div>
+                                                        <input type='text' name='phone' id='phone' class="form-control" placeholder="Phone" required>
+                                                    </div>
+                                                    <div>
+                                                        <input type='text' name='adresse' id='adresse' class="form-control" placeholder="Adresse" required>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-12">
+                                                    <div class="g-recaptcha" data-sitekey="6LdW03QgAAAAAJko8aINFd1eJUdHlpvT4vNKakj6"></div>
+                                                    <p id='submit' class="mt20">
+                                                        <input type='submit' id='send_message'  value='Envoyer' class="btn-danger btn-main">
+                                                    </p>
+                                                    <div id='mail_success' class='success'>Your message has been sent successfully.</div>
+                                                    <div id='mail_fail' class='error'>Sorry, error occurred this time sending your message.</div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    
+                                        <div id="success_message" class='success'>
+                                            Your message has been sent successfully. Refresh this page if you want to send more messages.
+                                        </div>
+                                        <div id="error_message" class='error'>
+                                            Sorry, there was an error sending your form.
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+
+                    
+                    
+                </div>
+
+
+
+
+                
+                
+                <script>
+                    const audioPlayer = document.getElementById('audioPlayer');
+                    const playButton = document.getElementById('playButton');
+                    const pauseButton = document.getElementById('pauseButton');
+                    const nextButton = document.getElementById('nextButton');
+                    const progressBar = document.getElementById('progressBar');
+                    const currentTimeSpan = document.getElementById('currentTime');
+                    const durationSpan = document.getElementById('duration');
+                    const playlist = document.getElementById('playlist');
+                
+                    let playbackTimer; // Déclarer la variable pour la minuterie de lecture
+                    let currentTrackIndex = 0; // Suivre l'index de la piste actuelle
+                
+                    function playCurrentTrack() {
+                        const currentTrack = playlist.children[currentTrackIndex];
+                        const source = currentTrack.getAttribute('data-src');
+                        audioPlayer.src = source;
+                        audioPlayer.play();
+                        // Réinitialiser la classe "list-group-item song" pour toutes les chansons
+                        Array.from(playlist.children).forEach((track) => {
+                            track.classList.remove('current-track');
+                        });
+                        // Ajouter la classe "current-track" à la chanson en cours
+                        currentTrack.classList.add('current-track');
+                    }
+                
+                    playButton.addEventListener('click', () => {
+                        playCurrentTrack();
+                    });
+                
+                    pauseButton.addEventListener('click', () => {
+                        audioPlayer.pause();
+                        clearTimeout(playbackTimer);
+                    });
+                
+                    nextButton.addEventListener('click', () => {
+                        currentTrackIndex = (currentTrackIndex + 1) % playlist.children.length;
+                        playCurrentTrack();
+                    });
+                
+                    playlist.addEventListener('click', (event) => {
+                        if (event.target && event.target.matches('.song')) {
+                            const clickedTrackIndex = Array.from(playlist.children).indexOf(event.target);
+                            currentTrackIndex = clickedTrackIndex;
+                            playCurrentTrack();
+                        }
+                    });
+                
+                    audioPlayer.addEventListener('timeupdate', () => {
+                        const currentTime = audioPlayer.currentTime;
+                        const duration = audioPlayer.duration;
+                        const progress = (currentTime / duration) * 100;
+                        progressBar.style.width = progress + '%';
+                
+                        // Mise à jour du minuteur
+                        currentTimeSpan.textContent = formatTime(currentTime);
+                        durationSpan.textContent = formatTime(duration);
+                
+                        if (currentTime >= 30) {
+                            audioPlayer.pause();
+                            audioPlayer.currentTime = 0;
+                            progressBar.style.width = '0%';
+                        }
+                    });
+                
+                    // Fonction pour formater le temps au format mm:ss
+                    function formatTime(time) {
+                        const minutes = Math.floor(time / 60);
+                        const seconds = Math.floor(time % 60);
+                        return minutes + ':' + (seconds < 10 ? '0' : '') + seconds;
+                    }
+                </script>
+                
+                <style>
+                    .current-track {
+                        background-color: black !important;
+                        color: white; /* Change the text color to make it readable */
+                    }
+                </style>
+                
+                
+                
+                
+                
+                <style>
+                    .audio-control-button {
+                        background: none;
+                        border: none;
+                        cursor: pointer;
+                    }
+                </style>              
+                
+                <style>
+                    #progressContainer {
+                        background-color: #fff;
+                        height: 10px;
+                        width: 100%;
+                    }
+                
+                    #progressBar {
+                        background-color: #a8561d;
+                        height: 100%;
+                        width: 0;
+                        transition: width 0.1s;
+                    }
+                </style>
+                
+                
+                
+                
+                
+            </div>
+
+            <div id="modal" class="modal">
+                <div class="modal-content">
+                    <!-- Contenu du formulaire affiché ici -->
+                </div>
+            </div>
+        
+            <script>
+                // Fonction pour afficher la fenêtre modale
+                document.getElementById("open-modal").addEventListener("click", function() {
+                    document.getElementById("modal").style.display = "block";
+                });
+        
+                // Fonction pour fermer la fenêtre modale en cliquant en dehors
+                window.addEventListener("click", function(event) {
+                    if (event.target == document.getElementById("modal")) {
+                        document.getElementById("modal").style.display = "none";
+                    }
+                });
+            </script>
+            {% comment %} <form action="{% url 'effectuer_transaction' %}" method="post">
+                {% csrf_token %}
+                <div class="modal-footer">
+                    <a> <button type="submit" class="btn btn-primary" id="">Valider</button></a>
+                </div>
+            </form> {% endcomment %}
+            
+            
+            <!-- Fenêtre modale pour saisir les coordonnées personnelles -->
+            <script>
+                var stripe = Stripe("{{ settings.STRIPE_PUBLISHABLE_KEY }}");
+                var elements = stripe.elements();
+        
+                // Créez les champs de carte Stripe et ajoutez-les au formulaire
+                var cardElement = elements.create('card');
+                cardElement.mount('#card-element');
+        
+                var form = document.querySelector('form');
+                var cardButton = document.getElementById('card-button');
+        
+                cardButton.addEventListener('click', function (event) {
+                    event.preventDefault();
+        
+                    // Créez une source Stripe et chargez-la
+                    stripe.createSource(cardElement).then(function (result) {
+                        if (result.source) {
+                            form.querySelector('input[name="stripeToken"]').value = result.source.id;
+                            form.submit();
+                        }
+                    });
+                });
+            </script>
+            {% comment %} <div class="modal fade" id="myModal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title">Saisissez vos coordonnées</h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <form id="personalInfoForm">
+                                <div class="form-group">
+                                    <label for="nom">Nom:</label>
+                                    <input type="text" class="form-control" id="nom" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for "prenom">Prénom:</label>
+                                    <input type="text" class="form-control" id="prenom" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="adresse">Adresse:</label>
+                                    <input type="text" class="form-control" id="adresse" required>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            {% comment %} <button type="button" class="btn btn-primary" id="submitInfo">Valider</button> {% endcomment %}
+                       {% comment %}  </div>
+                    </div>
+                </div>
+            </div> {% endcomment %}
+            
+            <script>
+                // Récupérer les éléments audio et la liste de lecture
+                const audioPlayer = document.getElementById('audioPlayer');
+                const playlist = document.getElementById('playlist');
+                const songs = playlist.querySelectorAll('.song');
+                const continueButton = document.getElementById('continueButton');
+            
+                // Variable pour suivre si la lecture a déjà commencé
+                let playbackStarted = false;
+            
+                // Fonction pour charger une chanson lorsque vous cliquez sur un élément de la liste de lecture
+                function loadSong(event) {
+                    const songSrc = event.target.getAttribute('data-src');
+                    if (songSrc) {
+                        audioPlayer.src = songSrc;
+                        audioPlayer.play();
+                        playbackStarted = true;
+                    }
+                }
+            
+                // Gestionnaire d'événements pour le bouton "Continuer"
+                continueButton.addEventListener('click', () => {
+                    // Afficher la fenêtre modale pour saisir les coordonnées
+                    $('#myModal').modal('show');
+                });
+            
+                // Gestionnaire d'événements pour la soumission du formulaire
+                document.getElementById('submitInfo').addEventListener('click', () => {
+                    const nom = document.getElementById('nom').value;
+                    const prenom = document.getElementById('prenom').value;
+                    const adresse = document.getElementById('adresse').value;
+            
+                    // Vérifier si tous les champs sont remplis
+                    if (nom && prenom && adresse) {
+                        // Télécharger l'album sous forme d'un fichier zip (ici, ktn.zip)
+                        window.location.href = "{% static 'ktn.zip' %}";
+                    } else {
+                        alert("Veuillez remplir tous les champs pour télécharger l'album.");
+                    }
+            
+                    // Cacher la fenêtre modale après la soumission
+                    $('#myModal').modal('hide');
+                });
+            
+                // Gestionnaire d'événements pour la progression de la lecture
+                audioPlayer.addEventListener('timeupdate', () => {
+                    // Vérifier si la lecture a dépassé 30 secondes (30 secondes = 30)
+                    if (audioPlayer.currentTime >= 30 && playbackStarted) {
+                        audioPlayer.pause();
+                        continueButton.style.display = 'block';
+                    }
+                });
+            
+                // Ajouter un gestionnaire d'événements pour chaque élément de la liste de lecture
+                songs.forEach(song => {
+                    song.addEventListener('click', loadSong);
+                });
+            </script>
+            
+            
+
+
+            <section id="section-tickets">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <div class="wm wow slideInUp">Discographie</div>
+                            <h2 class="wow fadeInUp" data-wow-delay=".2s"><span class="id-color"></span> Discographie</h2>
+                            <div class="small-border bg-color wow zoomIn" data-wow-delay=".4s"></div>
+                        </div>
+                        <div class="spacer-single"></div>
+                    </div>
+
+                    <ul class="list-inline">
+                        {% for song in songs %}
+                            <li class="list-inline-item">
+                                <div class="card" style="width: 15rem;">
+                                    <img src="{{ song.artworkUrl100 }}" class="card-img-top" alt="{{ song.collectionName }} - {{ song.trackName }}" style="height: 15rem;">
+                                    <div class="card-body">
+                                        <h5 class="card-title">{{ song.collectionName }}</h5>
+                                        <p class="card-text">{{ song.trackName }}</p>
+                                    </div>
+                                    <div class="audio-container">
+                                        <audio controls class="w-100">
+                                            <source src="{{ song.previewUrl }}" type="audio/mpeg">
+                                            Votre navigateur ne prend pas en charge l'élément audio.
+                                        </audio>
+                                    </div>
+                                </div>
+                            </li>
+                        {% endfor %}
+                    </ul>              
+                
+                
+
+                    {% comment %} <div class="row g-custom-x">
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div class="pricing-s1 mb-sm-30 wow flipInY">
+                                <div class="top text-center">
+                                    <h2>One-Day</h2>
+                                </div>
+                                <div class="mid text-center bg-color-secondary text-light">
+                                    <p class="price">
+                                        <span class="currency">$</span>
+                                        <span class="m opt-1">49.89</span>
+                                    </p>
+                                </div>
+                                <div class="bottom">
+                                    <ul>
+                                        <li><i class="icon_check"></i>Ticket for one day</li>
+                                        <li><i class="icon_check"></i>Chance to win doorprize</li>
+                                        <li><i class="icon_close"></i><s>Free official merchandise</s></li>
+                                        <li><i class="icon_close"></i><s>Free artist photo + signature</s></li>
+                                        <li><i class="icon_close"></i><s>Hotel Voucher</s></li>
+                                    </ul>
+                                </div>
+                                <div class="action text-center">
+                                    <a href="01_rockfest-ticket.html" class="btn-main">Buy Ticket</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div class="pricing-s1 mb-sm-30 wow flipInY">
+                                <div class="top text-center">
+                                    <h2>Three-Days</h2>
+                                </div>
+                                <div class="mid text-center bg-color-secondary text-light">
+                                    <p class="price">
+                                        <span class="currency">$</span>
+                                        <span class="m opt-1">69.89</span>
+                                    </p>
+                                </div>
+                                <div class="bottom">
+                                    <ul>
+                                        <li><i class="icon_check"></i>Ticket for three days</li>
+                                        <li><i class="icon_check"></i>Chance to win doorprize</li>
+                                        <li><i class="icon_check"></i>Free official merchandise</li>
+                                        <li><i class="icon_close"></i><s>Free artist photo + signature</s></li>
+                                        <li><i class="icon_close"></i><s>Hotel Voucher</s></li>
+                                    </ul>
+                                </div>
+                                <div class="action text-center">
+                                    <a href="01_rockfest-ticket.html" class="btn-main">Buy Ticket</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div class="pricing-s1 mb-sm-30 wow flipInY">
+                                <div class="top text-center">
+                                    <h2>All-Days</h2>
+                                </div>
+                                <div class="mid text-center bg-color-secondary text-light">
+                                    <p class="price">
+                                        <span class="currency">$</span>
+                                        <span class="m opt-1">89.89</span>
+                                    </p>
+                                </div>
+                                <div class="bottom">
+                                    <ul>
+                                        <li><i class="icon_check"></i>Ticket for all days</li>
+                                        <li><i class="icon_check"></i>Chance to win doorprize</li>
+                                        <li><i class="icon_check"></i>Free official merchandise</li>
+                                        <li><i class="icon_check"></i>Free artist photo + signature</li>
+                                        <li><i class="icon_check"></i>Hotel Voucher</li>
+                                    </ul>
+                                </div>
+                                <div class="action text-center">
+                                    <a href="01_rockfest-ticket.html" class="btn-main">Buy Ticket</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div> {% endcomment %}
+                </div>
+            </section>
+            <section id="section-schedule" aria-label="section-services-tab">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="text-center">
+                                <div class="wm wow slideInUp">Concerts et tournées</div>
+                                <h2 class="wow fadeInUp" data-wow-delay=".2s"><span class="id-color"></span> Concerts et tournées</h2>
+                                <div class="small-border bg-color wow zoomIn" data-wow-delay=".4s"></div>
+                            </div>
+                        </div>
+                        {% comment %} <div class="spacer-single"></div>
+                        <div class="col-md-12">
+                            <div class="de_tab tab_style_4 text-center">
+                                <ul class="de_nav de_nav_dark">
+                                    <li class="active" data-link="#section-services-tab">
+                                        <h3>Day <span>01</span></h3>
+                                        <h4>Aug 20, 2023</h4>
+                                    </li>
+                                    <li data-link="#section-services-tab">
+                                        <h3>Day <span>02</span></h3>
+                                        <h4>Aug 21, 2023</h4>
+                                    </li>
+                                    <li data-link="#section-services-tab">
+                                        <h3>Day <span>03</span></h3>
+                                        <h4>Aug 22, 2023</h4>
+                                    </li>
+                                    <li data-link="#section-services-tab">
+                                        <h3>Day <span>04</span></h3>
+                                        <h4>Aug 23, 2023</h4>
+                                    </li>
+                                    <li data-link="#section-services-tab">
+                                        <h3>Day <span>05</span></h3>
+                                        <h4>Aug 24, 2023</h4>
+                                    </li>
+                                </ul>
+                                <div class="de_tab_content text-left">
+                                    <div id="tab1" class="tab_single_content" data-bgimage="url({% static 'images/background/t1.jpg' %}) top">
+                                        <div class="row">
+                                            <div class="col-md-12 text-center">
+                                                <ul class="list-boxed-s1">
+                                                    <li>
+                                                        <h3>Guns N Roses</h3><span></span>
+                                                    </li>
+                                                    <li>
+                                                        <h3>The Hives</h3><span></span>
+                                                    </li>
+                                                    <li>
+                                                        <h3>Gojira</h3><span></span>
+                                                    </li>
+                                                    <li>
+                                                        <h3>Joan Jett</h3><span></span>
+                                                    </li>
+                                                    <li>
+                                                        <h3>Action Bronson</h3><span></span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="tab2" class="tab_single_content" data-bgimage="url({% static 'images/background/t2.jpg' %}) top">
+                                        <div class="row">
+                                            <div class="col-md-12 text-center">
+                                                <ul class="list-boxed-s1">
+                                                    <li>
+                                                        <h3>Kiss</h3><span></span>
+                                                    </li>
+                                                    <li>
+                                                        <h3>The Distillers</h3><span></span>
+                                                    </li>
+                                                    <li>
+                                                        <h3>Halestorm</h3><span></span>
+                                                    </li>
+                                                    <li>
+                                                        <h3>Chevelle</h3><span></span>
+                                                    </li>
+                                                    <li>
+                                                        <h3>In This Moment</h3><span></span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="tab3" class="tab_single_content" data-bgimage="url({% static 'images/background/t3.jpg' %}) top">
+                                        <div class="row">
+                                            <div class="col-md-12 text-center">
+                                                <ul class="list-boxed-s1">
+                                                    <li>
+                                                        <h3>Pearl Jam</h3><span></span>
+                                                    </li>
+                                                    <li>
+                                                        <h3>Killswitch Engage</h3><span></span>
+                                                    </li>
+                                                    <li>
+                                                        <h3>The Struts</h3><span></span>
+                                                    </li>
+                                                    <li>
+                                                        <h3>Refused</h3><span></span>
+                                                    </li>
+                                                    <li>
+                                                        <h3>Parkway Drive</h3><span></span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="tab4" class="tab_single_content" data-bgimage="url({% static 'images/background/t4.jpg' %}) top">
+                                        <div class="row">
+                                            <div class="col-md-12 text-center">
+                                                <ul class="list-boxed-s1">
+                                                    <li>
+                                                        <h3>Guns N Roses</h3><span></span>
+                                                    </li>
+                                                    <li>
+                                                        <h3>Beartooth</h3><span></span>
+                                                    </li>
+                                                    <li>
+                                                        <h3>Scars on Broadway</h3><span></span>
+                                                    </li>
+                                                    <li>
+                                                        <h3>Architects</h3><span></span>
+                                                    </li>
+                                                    <li>
+                                                        <h3>Tom Morrelo</h3><span></span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="tab5" class="tab_single_content" data-bgimage="url({% static 'images/background/t5.jpg' %}) top">
+                                        <div class="row">
+                                            <div class="col-md-12 text-center">
+                                                <ul class="list-boxed-s1">
+                                                    <li>
+                                                        <h3>Kiss</h3><span></span>
+                                                    </li>
+                                                    <li>
+                                                        <h3>Pearl Jam</h3><span></span>
+                                                    </li>
+                                                    <li>
+                                                        <h3>Guns N Roses</h3><span></span>
+                                                    </li>
+                                                    <li>
+                                                        <h3>Avatar</h3><span></span>
+                                                    </li>
+                                                    <li>
+                                                        <h3>Bad Wolves</h3><span></span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> {% endcomment %}
+                    </div>
+                </div>
+            </section>
+            <section id="section-gallery">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <div class="wm wow slideInUp">Gallery</div>
+                            <h2 class="wow fadeInUp" data-wow-delay=".2s"><span class="id-color"></span> Gallery</h2>
+                            <div class="small-border bg-color wow zoomIn" data-wow-delay=".4s"></div>
+                        </div>
+                        <div class="spacer-single"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-8 offset-md-2">
+                            <div id="carouselExampleIndicators" class="carousel slide carousel-fade wow flipInY" data-mdb-ride="carousel">
+                                <!-- Slides -->
+                                <div class="carousel-inner mb-5">
+                                    <div class="carousel-item active">
+                                        <img src="{% static 'images/2.jpeg' %}" class="d-block w-100" alt="" />
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="{% static 'images/2.jpeg' %}" class="d-block w-100" alt="" />
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="{% static 'images/2.jpeg' %}" class="d-block w-100" alt="" />
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="{% static 'images/2.jpeg' %}" class="d-block w-100" alt="" />
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="{% static 'images/2.jpeg' %}" class="d-block w-100" alt="" />
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="{% static 'images/2.jpeg' %}" class="d-block w-100" alt="" />
+                                    </div>
+
+                                </div>
+                                <!-- Slides -->
+                                <!-- Controls -->
+                                <button class="carousel-control-prev" type="button" data-mdb-target="#carouselExampleIndicators" data-mdb-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-mdb-target="#carouselExampleIndicators" data-mdb-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                                <!-- Controls -->
+                                <!-- Thumbnails -->
+                                <div class="carousel-indicators" style="margin-bottom: -20px;">
+                                    <button type="button" data-mdb-target="#carouselExampleIndicators" data-mdb-slide-to="0" class="active" aria-current="true" aria-label="Slide 1" style="width: 100px;">
+                                        <img class="d-block w-100 img-fluid" src="{% static 'images/2.jpeg' %}" alt="" />
+                                    </button>
+                                    <button type="button" data-mdb-target="#carouselExampleIndicators" data-mdb-slide-to="1" aria-label="Slide 2" style="width: 100px;">
+                                        <img class="d-block w-100 img-fluid" src="{% static 'images/2.jpeg' %}" alt="" />
+                                    </button>
+                                    <button type="button" data-mdb-target="#carouselExampleIndicators" data-mdb-slide-to="2" aria-label="Slide 3" style="width: 100px;">
+                                        <img class="d-block w-100 img-fluid" src="{% static 'images/2.jpeg' %}" alt="" />
+                                    </button>
+                                    <button type="button" data-mdb-target="#carouselExampleIndicators" data-mdb-slide-to="3" aria-label="Slide 4" style="width: 100px;">
+                                        <img class="d-block w-100 img-fluid" src="{% static 'images/2.jpeg' %}" alt="" />
+                                    </button>
+                                    <button type="button" data-mdb-target="#carouselExampleIndicators" data-mdb-slide-to="4" aria-label="Slide 5" style="width: 100px;">
+                                        <img class="d-block w-100 img-fluid" src="{% static 'images/2.jpeg' %}" alt="" />
+                                    </button>
+                                    <button type="button" data-mdb-target="#carouselExampleIndicators" data-mdb-slide-to="5" aria-label="Slide 6" style="width: 100px;">
+                                        <img class="d-block w-100 img-fluid" src="{% static 'images/2.jpeg' %}" alt="" />
+                                    </button>
+                                </div>
+                                <!-- Thumbnails -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+			<section aria-label="section">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-md-12">
+                            <form name="contactForm" id='contact_form' class="form-border" method="post">
+                                <div class="row g-custom-x">
+                                    <div class="col-md-12">
+                                        <h3>Contactez Nous</h3>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div id='name_error' class='error'>Please enter your name.</div>
+                                        <div>
+                                            <input type='text' name='Name' id='name' class="form-control" placeholder="Nom et Prenom" required>
+                                        </div>
+
+                                        <div id='email_error' class='error'>Please enter your valid E-mail ID.</div>
+                                        <div>
+                                            <input type='email' name='Email' id='email' class="form-control" placeholder="Email" required>
+                                        </div>
+
+                                        <div id='phone_error' class='error'>Please enter your phone number.</div>
+                                        <div>
+                                            <input type='text' name='phone' id='phone' class="form-control" placeholder="Téléphone" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div id='message_error' class='error'>Please enter your message.</div>
+                                        <div>
+                                            <textarea name='message' id='message' class="form-control" placeholder="Message" required></textarea>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-12">
+                                        <div class="g-recaptcha" data-sitekey="6LdW03QgAAAAAJko8aINFd1eJUdHlpvT4vNKakj6"></div>
+                                        <p id='submit' class="mt20">
+                                            <input type='submit' id='send_message'  value='Envoyer' class="btn-danger btn-main">
+                                        </p>
+                                        <div id='mail_success' class='success'>Your message has been sent successfully.</div>
+                                        <div id='mail_fail' class='error'>Sorry, error occured this time sending your message.</div>
+                                        
+                                    </div>
+                                </div>
+                            </form>
+
+                            <div id="success_message" class='success'>
+                                Your message has been sent successfully. Refresh this page if you want to send more messages.
+                            </div>
+                            <div id="error_message" class='error'>
+                                Sorry there was an error sending your form.
+                            </div>
+
+                        </div>
+
+                        {% comment %} <div id="sidebar" class="col-md-4">
+
+                            <div class="widget widget_text">
+                                <h3>Contact Info</h3>
+                                <address>
+                                    <span><strong>Address:</strong>100 S Main St, Los Angeles, CA</span>
+                                    <span><strong>Phone:</strong>(208) 333 9296</span>
+                                    <span><strong>Fax:</strong>(208) 333 9298</span>
+                                    <span><strong>Email:</strong><a href="mailto:contact@example.com">contact@example.com</a></span>
+                                    <span><strong>Web:</strong><a href="#test">http://example.com</a></span>
+                                    <span><strong>Open</strong>Sunday - Friday 08:00 - 18:00</span>
+                                </address>
+                            </div>
+                        </div> {% endcomment %}
+                    </div>
+                </div>
+            </section>
+
+            {% comment %} <section>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <div class="wm wow slideInUp">Sponsors</div>
+                            <h2 class="wow fadeInUp" data-wow-delay=".2s"><span class="id-color">05</span> Sponsored by:</h2>
+                            <div class="small-border bg-color wow zoomIn" data-wow-delay=".4s"></div>
+                        </div>
+                        <div class="spacer-single"></div>
+                    </div>
+                    <div class="row g-custom-x">
+                        <div class="col-lg-2 col-md-4 col-6 mb-sm-30">
+                            <img src="images/sponsors/logo-1.png" class="img-fluid" alt="">
+                        </div>
+                        <div class="col-lg-2 col-md-4 col-6 mb-sm-30">
+                            <img src="images/sponsors/logo-2.png" class="img-fluid" alt="">
+                        </div>
+                        <div class="col-lg-2 col-md-4 col-6 mb-sm-30">
+                            <img src="images/sponsors/logo-3.png" class="img-fluid" alt="">
+                        </div>
+                        <div class="col-lg-2 col-md-4 col-6 mb-sm-30">
+                            <img src="images/sponsors/logo-4.png" class="img-fluid" alt="">
+                        </div>
+                        <div class="col-lg-2 col-md-4 col-6 mb-sm-30">
+                            <img src="images/sponsors/logo-5.png" class="img-fluid" alt="">
+                        </div>
+                        <div class="col-lg-2 col-md-4 col-6 mb-sm-30">
+                            <img src="images/sponsors/logo-6.png" class="img-fluid" alt="">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="section-countdown" aria-label="section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-10 offset-md-1">
+                            <div class="wm wow slideInUp">Begin in</div>
+                            <div id="defaultCountdown" class="wow fadeInUp" data-wow-delay=".2s"></div>
+                        </div>
+                    </div>
+                </div>
+            </section> {% endcomment %}
+        </div>
+        <!-- content close -->
+        <a href="#" id="back-to-top"></a>
+        <!-- footer begin -->
+        <footer>
+            {% comment %} <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-sm-6 col-xs-1">
+                        <div class="widget">
+                            <h5>Contact Info</h5>
+                            <address class="s1">
+                                <span><i class="id-color fa fa-map-marker fa-lg"></i>08 W 36th St, New York, NY 10001</span>
+                                <span><i class="id-color fa fa-phone fa-lg"></i>+1 333 1000 2000</span>
+                                <span><i class="id-color fa fa-envelope-o fa-lg"></i><a href="mailto:contact@example.com">contact@example.com</a></span>
+                            </address>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-1">
+                        <div class="widget">
+                            <h5>Quick Links</h5>
+                            <ul>
+                                <li><a href="01_rockfest-blog.html">Blog</a></li>
+                                <li><a href="01_rockfest-gallery.html">Gallery</a></li>
+                                <li><a href="01_rockfest-contact.html">Contact Us</a></li>
+                                <li><a href="#section-tickets">Ticket</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-1">
+                        <div class="widget">
+                            <h5>Latest Blog</h5>
+                            <ul>
+                                <li><a href="01_rockfest-blog-single.html">Unreleased Footage of Pearl Jam</a></li>
+                                <li><a href="01_rockfest-blog-single.html">Kiss Announce New Single</a></li>
+                                <li><a href="01_rockfest-blog-single.html">Guns N' Roses Announce Tour</a></li>
+                                <li><a href="01_rockfest-blog-single.html">Tom Morello New Collaboration</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-1">
+                        <div class="widget">
+                            <h5>Newsletter</h5>
+                            <p>Signup for our newsletter to get the latest news in your inbox.</p>
+                            <form action="https://www.madebydesignesia.com/themes/rockfest/blank.php" class="row form-dark" id="form_subscribe" method="post" name="form_subscribe">
+                                <div class="col text-center">
+                                    <input class="form-control" id="txt_subscribe" name="txt_subscribe" placeholder="enter your email" type="text" /> <a href="#" id="btn-subscribe"><i class="arrow_right bg-color-secondary"></i></a>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </form>
+                            <div class="spacer-10"></div>
+                            <small>Your email is safe with us. We don't spam.</small>
+                        </div>
+                    </div>
+                </div>
+            </div> {% endcomment %}
+            <div class="subfooter">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="de-flex">
+                                <div class="de-flex-col">
+                                    <a href="index.html">
+                                        <img alt="" class="f-logo" src="" />KTN<span class="copy">&copy; Copyright 2023 - Pencum Tech </span>
+                                    </a>
+                                </div>
+                                <div class="de-flex-col">
+                                    <div class="social-icons">
+                                        <a href="#"><i class="fa fa-facebook fa-lg"></i></a>
+                                        <a href="#"><i class="fa fa-twitter fa-lg"></i></a>
+                                        <a href="#"><i class="fa fa-linkedin fa-lg"></i></a>
+                                        <a href="#"><i class="fa fa-pinterest fa-lg"></i></a>
+                                        <a href="#"><i class="fa fa-rss fa-lg"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- footer close -->
+    </div>
+    {% comment %} <div id="selector">
+        <div id="demo-rtl" class="sc-opt">
+            <div class="sc-icon">RTL</div><span class="sc-val">Click to Enable</span>
+        </div>#imageDDD/logo.png
+    </div> {% endcomment %}
+    <!-- Javascript Files
+    ================================================== -->
+
+        <script src="{% static 'js/jquery.min.js' %}"></script>
+        <script src="{% static 'js/bootstrap.min.js' %}"></script>
+        <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+        <script src="{% static 'js/wow.min.js' %}"></script>
+        <script src="{% static 'js/jquery.isotope.min.js' %}"></script>
+        <script src="{% static 'js/easing.js' %}"></script>
+        <script src="{% static 'js/owl.carousel.js' %}"></script>
+        <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+        <script src="{% static 'js/enquire.min.js' %}"></script>
+        <script src="{% static 'js/jquery.plugin.js' %}"></script>
+        <script src="{% static 'js/jquery.countTo.js' %}"></script>
+        <script src="{% static 'js/jquery.countdown.js' %}"></script>
+        <script src="{% static 'js/jquery.lazy.min.js' %}"></script>
+        <script src="{% static 'js/jquery.lazy.plugins.min.js' %}"></script>
+        <script src="{% static 'js/mdb.min.js' %}"></script>
+        <script src="{% static 'js/jquery.countdown.js' %}"></script>
+        <script src="{% static 'js/countdown-custom.js' %}"></script>
+        <script src="{% static 'js/cookit.js' %}"></script>    
+        <script src="{% static 'js/jarallax.js' %}"></script>    
+        <script src="{% static 'js/designesia.js' %}"></script>
+        <script src="{% static 'assets/form.js' %}"></script>
+
+        <!-- PLUGINS  -->
+        <script>
+        $(document).ready(function() {
+            $(".jarallax").jarallax();
+
+            $.cookit({
+            backgroundColor: '#111111',
+            messageColor: '#fff',
+            linkColor: '#e50000',
+            buttonColor: '#ffffff',
+            messageText: "This website uses <b>cookies</b> to ensure you get the best experience on our website.",
+            linkText: "Learn more",
+            linkUrl: "index.html",
+            buttonText: "I accept",
+            });
+        });
+        </script>
+</body>
+
+</html>
