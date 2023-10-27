@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-p((#)x1-87+dd%#hd+hef%u%m9a+302k7o0z1n2#4%%qe4sbq#
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -46,6 +46,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -108,8 +109,8 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'alassane.aw1@ism.edu.sn'
-EMAIL_HOST_PASSWORD = 'obolspwwkaolldbv'
+EMAIL_HOST_USER = 'zblackofficiel@gmail.com'
+EMAIL_HOST_PASSWORD = 'ujkq jwrl mkpc scge'
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
@@ -127,8 +128,8 @@ USE_TZ = True
 
 PAYDUNYA_ACCESS_TOKENS = {
   'PAYDUNYA-MASTER-KEY': "53EUJ8SY-AsLk-zlif-y65m-oqrp13GPyFeC",
-  'PAYDUNYA-PRIVATE-KEY': "live_private_dFIa9Qo3UaRvt6UfwEcvQSuxIKe",
-  'PAYDUNYA-TOKEN': "pivLgKfRxL0ZdtGXa4Tu"
+  'PAYDUNYA-PRIVATE-KEY': "test_private_VRTIKLvxMpef2jSdqMSaiOKkHSA",
+  'PAYDUNYA-TOKEN': "O0DEfbsHT0cMEl3pUt7m"
 }
 
 

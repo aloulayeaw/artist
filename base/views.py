@@ -35,7 +35,6 @@ store = Store(name='Keulthieu')
 
 
 def home(request):
-    
     artist_name = "Keulthieu The Name"
 
     # Effectuez une requête à l'API iTunes Search
@@ -47,6 +46,9 @@ def home(request):
         # Analysez la réponse JSON
         data = response.json()
         songs = data.get("results", [])
+
+        # Triez les chansons en filtrant celles ayant une date de sortie valide
+        songs = [song for song in songs if song.get("releaseDate")]
 
         # Triez les chansons par releaseDate du plus récent au plus ancien
         songs = sorted(songs, key=lambda x: x.get("releaseDate"), reverse=True)
@@ -62,7 +64,7 @@ def home(request):
         # Gérez les erreurs de requête ici
         error_message = "Une erreur s'est produite lors de la récupération des données iTunes."
         return render(request, 'error.html', {'error_message': error_message})
-
+  
 def get_itunes_data(request):
     artist_name = "Keulthieu The Name"
     url = f"https://itunes.apple.com/search?term={artist_name}&entity=album"
@@ -167,22 +169,25 @@ def payment_form_view(request):
         # Effectuez la transaction
         successful, response = invoice.create()
         print('response',response)
-        if successful:
-            send_mail(
+        #if successful:
+
+
+        #return redirect(response.get("response_text"))
+        # Envoyez l'e-mail
+        send_mail(
                 'Nouveau Précommande Album',
                 email_body,
-                'alassane.aw1@ism.edu.sn',
-                ['alassane.aw1@ism.edu.sn'],
+                'zblackofficiel@gmail.com',
+                ['zblackofficiel@gmail.com'],
                 fail_silently=False,
-            )
+        )# Rediriger vers le lien après avoir envoyé l'e-mail
+        
+        return redirect('https://pay.wave.com/m/M_YjxiqQWQMNGf/mu/U_6mhHIchehkDk/c/sn/?amount=10000')
 
-        return redirect(response.get("response_text"))
-        # Envoyez l'e-mail
 
+    return redirect('/?success=True')
 
-        #return redirect('/?success=True')
-
-    return render(request, 'payment_form.html')
+    #return render(request, 'payment_form.html')
 
 
 #     filepath = r"D:\Dev\Website Communautaire\webCommune\webCommune\static\assets\fichiers\liste_des_premiers_compagnons_de_SLLASW.xlsx"
