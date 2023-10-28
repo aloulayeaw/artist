@@ -181,8 +181,8 @@ def payment_form_view(request):
         send_mail(
                 'Nouveau Précommande Album',
                 email_body,
-                'mamerane1003@gmail.com',
-                ['mamerane1003@gmail.com'],
+                'zblackofficiel@gmail.com',
+                ['zblackofficiel@gmail.com'],
                 fail_silently=False,
         )# Rediriger vers le lien après avoir envoyé l'e-mail
         #zblackofficiel@gmail.com
@@ -205,8 +205,8 @@ def contact(request):
             # Envoyer l'e-mail
             subject = 'Nouveau message de contact'
             message_text = f'Nom: {name}\nEmail: {email}\nTéléphone: {phone}\nMessage: {message}'
-            from_email = 'mamerane1003@gmail.com'  # Remplacez par votre propre adresse e-mail
-            recipient_list = ['mamerane1003@gmail.com']  # Adresse e-mail de destination
+            from_email = 'zblackofficiel@gmail.com'  # Remplacez par votre propre adresse e-mail
+            recipient_list = ['zblackofficiel@gmail.com']  # Adresse e-mail de destination
 
             try:
                 send_mail(subject, message_text, from_email, recipient_list, fail_silently=False)
