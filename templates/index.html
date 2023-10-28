@@ -882,8 +882,36 @@
                         </div>
                         <div class="spacer-single"></div>
                     </div>
+                    <div class="container">
+                        <div class="row g-custom-x">
+                            <div class="col-lg-6 col-md-6 mb20">
+                                <div class="de-event-item">
+                                        <div class="d-content">
+                                            <div class="d-image">
+                                                <span class="d-image-wrap">
+                                                    <a href="https://music.apple.com/us/artist/keulthieu-the-name/1534987792">
+                                                        <img alt="" style="width: 430px; height: 620px; border-radius: 50px;" src="{% static 'images/itunes.PNG' %}" class="lazy"></span>
+                                                    </a>
+                                                </div>
+                                        </div>
+                                </div>
+                            </div>
 
-                    <ul class="list-inline">
+                            <div class="col-lg-6 col-md-6 mb20">
+                                <div class="de-event-item">
+                                        <div class="d-content">
+                                            <div class="d-image">
+                                                <span class="d-image-wrap">
+                                                    <a href="https://open.spotify.com/intl-fr/artist/1zYchgoW4HXLvFAiZ3X9Nm">
+                                                        <img alt="" style="width: 430px; height: 620px; border-radius: 50px;" src="{% static 'images/spotify.PNG' %}" class="lazy"></span>
+                                                    </a>
+                                                </div>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% comment %} <ul class="list-inline">
                         {% for song in songs %}
                             <li class="list-inline-item">
                                 <div class="card" style="width: 15rem;">
@@ -901,8 +929,7 @@
                                 </div>
                             </li>
                         {% endfor %}
-                    </ul>              
-                
+                    </ul>               {% endcomment %}
                 </div>
             </section>
 
