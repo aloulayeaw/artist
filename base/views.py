@@ -25,6 +25,10 @@ from django.views.decorators.csrf import csrf_exempt
 from django.views.decorators.http import require_POST
 from .models import PaymentForm
 from .forms import PaymentFormModelForm
+from django.http import HttpResponse
+from django.core.mail import send_mail
+from django.views.decorators.csrf import csrf_exempt
+import json
 
 paydunya.debug = False
 
@@ -187,6 +191,33 @@ def payment_form_view(request):
 
     return redirect('/?success=True')
 
+
+@csrf_exempt
+def contact(request):
+    if request.method == 'POST':
+        name = request.POST.get('Name')
+        email = request.POST.get('Email')
+        phone = request.POST.get('phone')
+        message = request.POST.get('message')
+
+        # Validation du formulaire (vous pouvez ajouter plus de validation au besoin)
+        if name and email and phone and message:
+            # Envoyer l'e-mail
+            subject = 'Nouveau message de contact'
+            message = f'Nom: {name}\nEmail: {email}\nTéléphone: {phone}\nMessage: {message}'
+            from_email = 'mamerane1003@gmail.com'  # Remplacez par votre propre adresse e-mail
+            recipient_list = ['mamerane1003@gmail.com']  # Adresse e-mail de destination
+
+            try:
+                send_mail(subject, message, from_email, recipient_list, fail_silently=False)
+                response_data = {'success': True, 'message': 'Votre message a été envoyé avec succès.'}
+                return HttpResponse(json.dumps(response_data), content_type="application/json")
+            except Exception as e:
+                response_data = {'success': False, 'message': 'Une erreur s\'est produite lors de l\'envoi de votre message.'}
+                return HttpResponse(json.dumps(response_data), content_type="application/json")
+        else:
+            response_data = {'success': False, 'message': 'Veuillez remplir tous les champs du formulaire.'}
+            return HttpResponse(json.dumps(response_data), content_type="application/json")
     #return render(request, 'payment_form.html')
 
 

@@ -8,6 +8,7 @@ urlpatterns = [
     path('precommander/', views.paiement, name='payment'),
     path('payment/', views.payment_form_view, name='payment_form'),
     path('get_itunes_data/', views.get_itunes_data, name='get_itunes_data'),
+    path('contact/', views.contact, name='contact'),
     #path('about', views.about, name='about'),
     #path('cartographie', views.cartographie, name='cartographie'),
 ]
