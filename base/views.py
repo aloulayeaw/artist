@@ -41,8 +41,8 @@ store = Store(name='Keulthieu')
 def home(request):
     artist_name = "Keulthieu The Name"
 
-    # Effectuez une requête à l'API iTunes Search
-    url = f"https://itunes.apple.com/search?term={artist_name}&entity=song"
+    # Effectuez une requête à l'API iTunes Search avec une limite de 5 résultats
+    url = f"https://itunes.apple.com/search?term={artist_name}&entity=song&limit=7"
     response = requests.get(url)
 
     # Vérifiez si la requête a réussi
@@ -56,6 +56,9 @@ def home(request):
 
         # Triez les chansons par releaseDate du plus récent au plus ancien
         songs = sorted(songs, key=lambda x: x.get("releaseDate"), reverse=True)
+
+        # Sélectionnez les 5 premières chansons
+        songs = songs[:7]
 
         # Envoyez les données triées à votre modèle HTML
         context = {
