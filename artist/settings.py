@@ -26,9 +26,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-p((#)x1-87+dd%#hd+hef%u%m9a+302k7o0z1n2#4%%qe4sbq#'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['*', "keulthieuthename.com"]
 
 
 # Application definition
@@ -71,6 +71,8 @@ TEMPLATES = [
         },
     },
 ]
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 WSGI_APPLICATION = 'artist.wsgi.application'
 
@@ -140,16 +142,16 @@ STATIC_URL = '/static/'
 #STATIC_URL = 'static/'
 
 
-STATIC_ROOT = os.path.join(BASE_DIR, "static/")
+STATIC_ROOT = BASE_DIR / "static"
 
 STATICFILES_DIRS = [ 
-    BASE_DIR / "artist/static",
+    BASE_DIR / "static",
+    BASE_DIR / "artist" / "static",
     
-    os.path.join(BASE_DIR, 'artist/static'),
 ]
 
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+# MEDIA_URL = '/media/'
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
 # if os.environ.get('ENV') == 'PRODUCTION':
     
