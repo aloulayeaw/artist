@@ -181,18 +181,18 @@ def payment_form_view(request):
         send_mail(
                 'Nouveau Précommande Album',
                 email_body,
-                'zblackofficiel@gmail.com',
-                ['zblackofficiel@gmail.com'],
+                'mamerane1003@gmail.com',
+                ['mamerane1003@gmail.com'],
                 fail_silently=False,
         )# Rediriger vers le lien après avoir envoyé l'e-mail
-        
+        #zblackofficiel@gmail.com
         return redirect('https://pay.wave.com/m/M_YjxiqQWQMNGf/mu/U_6mhHIchehkDk/c/sn/?amount=10000')
 
 
     return redirect('/?success=True')
 
 
-@csrf_exempt
+
 def contact(request):
     if request.method == 'POST':
         name = request.POST.get('Name')
@@ -204,21 +204,23 @@ def contact(request):
         if name and email and phone and message:
             # Envoyer l'e-mail
             subject = 'Nouveau message de contact'
-            message = f'Nom: {name}\nEmail: {email}\nTéléphone: {phone}\nMessage: {message}'
+            message_text = f'Nom: {name}\nEmail: {email}\nTéléphone: {phone}\nMessage: {message}'
             from_email = 'mamerane1003@gmail.com'  # Remplacez par votre propre adresse e-mail
             recipient_list = ['mamerane1003@gmail.com']  # Adresse e-mail de destination
 
             try:
-                send_mail(subject, message, from_email, recipient_list, fail_silently=False)
-                response_data = {'success': True, 'message': 'Votre message a été envoyé avec succès.'}
-                return HttpResponse(json.dumps(response_data), content_type="application/json")
+                send_mail(subject, message_text, from_email, recipient_list, fail_silently=False)
+                response_data = {'success': True, 'message': 'Les données ont été envoyées avec succès.'}
+                return JsonResponse(response_data)
             except Exception as e:
                 response_data = {'success': False, 'message': 'Une erreur s\'est produite lors de l\'envoi de votre message.'}
-                return HttpResponse(json.dumps(response_data), content_type="application/json")
+                return JsonResponse(response_data, status=500)
         else:
             response_data = {'success': False, 'message': 'Veuillez remplir tous les champs du formulaire.'}
-            return HttpResponse(json.dumps(response_data), content_type="application/json")
-    #return render(request, 'payment_form.html')
+            return JsonResponse(response_data, status=400)
+
+    # Si la méthode n'est pas POST, affichez simplement le formulaire
+    return render(request, 'index.html')#return render(request, 'payment_form.html')
 
 
 #     filepath = r"D:\Dev\Website Communautaire\webCommune\webCommune\static\assets\fichiers\liste_des_premiers_compagnons_de_SLLASW.xlsx"
