@@ -42,7 +42,7 @@ def home(request):
     artist_name = "Keulthieu The Name"
 
     # Effectuez une requête à l'API iTunes Search avec une limite de 5 résultats
-    url = f"https://itunes.apple.com/search?term={artist_name}&entity=song&limit=7"
+    url = f"https://itunes.apple.com/search?term=Keulthieu The Name&entity=song&limit=7"
     response = requests.get(url)
 
     # Vérifiez si la requête a réussi
@@ -156,12 +156,13 @@ def payment_form_view(request):
         email = request.POST.get('Email', '')
         phone = request.POST.get('phone', '')
         message = request.POST.get('adresse', '')
+        product = request.POST.get('product', '')
 
         if not name or not email or not phone or not message:
             return render(request, 'payment_form.html', {'error_message': 'Tous les champs sont obligatoires'})
 
         # Créez le corps de l'e-mail avec les informations du formulaire
-        email_body = f"Nom: {name}\nEmail: {email}\nTéléphone: {phone}\nMessage: {message}"
+        email_body = f"Nom: {name}\nEmail: {email}\nTéléphone: {phone}Product: {product}\nMessage: {message}"
         
         items = [InvoiceItem(
             name='Album Keulthieu',
@@ -182,7 +183,7 @@ def payment_form_view(request):
         #return redirect(response.get("response_text"))
         # Envoyez l'e-mail
         send_mail(
-                'Nouveau Précommande Album',
+                'Précommande Mixtape Demb Ak Tay',
                 email_body,
                 'zblackofficiel@gmail.com',
                 ['zblackofficiel@gmail.com'],
