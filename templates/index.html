@@ -515,6 +515,7 @@
                                                                 <div id="payment_button_container" style="display: none;">
                                                                     <p>
                                                                         Merci d'avoir rempli ce formulaire, finaliser votre commande  en cliquant sur ce bouton. Notre équipe vous contactera par mail pour la suite.
+                                                                        <br><br><br>
                                                                         <a id="payment_button" href="https://pay.wave.com/m/M_YjxiqQWQMNGf/mu/U_6mhHIchehkDk/c/sn/?amount=10000" target="_blank" class="btn btn-success">Payer</a>
                                                                     </p>
                                                                 </div>
@@ -574,10 +575,11 @@
                                         $('#mail_success').text(data.success_message);
                                         // Affichez le bouton de paiement
                                         $('#payment_button_container').show();
-                                        // Attachez un gestionnaire d'événements au bouton de paiement pour empêcher la navigation
+                                        // Attachez un gestionnaire d'événements au bouton de paiement pour rediriger vers l'URL
                                         $('#payment_button').on('click', function (e) {
-                                            e.preventDefault(); // Empêche la navigation vers une autre page
-                                            // Ici, vous pouvez ajouter la logique de paiement ou afficher un message supplémentaire
+                                            e.preventDefault(); // Empêche le comportement de lien par défaut
+                                            // Redirige vers l'URL de paiement
+                                            window.location.href = 'https://pay.wave.com/m/M_YjxiqQWQMNGf/mu/U_6mhHIchehkDk/c/sn/?amount=10000';
                                         });
                                     } else if (data.error_message) {
                                         // Affichez le message d'erreur si nécessaire
