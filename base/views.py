@@ -159,11 +159,11 @@ def payment_form_view(request):
         product = request.POST.get('product', '')
 
         if not name or not email or not phone or not message:
-            return render(request, 'payment_form.html', {'error_message': 'Tous les champs sont obligatoires'})
+            return JsonResponse({'error_message': 'Tous les champs sont obligatoires'})
 
         # Créez le corps de l'e-mail avec les informations du formulaire
-        email_body = f"Nom: {name}\nEmail: {email}\nTéléphone: {phone}Product: {product}\nMessage: {message}"
-        
+        email_body = f"Nom: {name}\nEmail: {email}\nTéléphone: {phone}\nProduct: {product}\nMessage: {message}"
+
         items = [InvoiceItem(
             name='Album Keulthieu',
             quantity=1,
@@ -176,26 +176,22 @@ def payment_form_view(request):
 
         # Effectuez la transaction
         successful, response = invoice.create()
-        print('response',response)
-        #if successful:
+        print('response', response)
 
-
-        #return redirect(response.get("response_text"))
         # Envoyez l'e-mail
         send_mail(
-                'Précommande Mixtape Demb Ak Tay',
-                email_body,
-                'zblackofficiel@gmail.com',
-                ['zblackofficiel@gmail.com'],
-                fail_silently=False,
-        )# Rediriger vers le lien après avoir envoyé l'e-mail
-        #zblackofficiel@gmail.com
-        return redirect('https://pay.wave.com/m/M_YjxiqQWQMNGf/mu/U_6mhHIchehkDk/c/sn/?amount=10000')
+            'Précommande Mixtape Demb Ak Tay',
+            email_body,
+            'zblackofficiel@gmail.com',
+            ['zblackofficiel@gmail.com'],
+            fail_silently=False,
+            #
+        )
 
+        # Retournez une réponse JSON indiquant que les données ont été enregistrées avec succès
+        return JsonResponse({'success_message': 'Vos données ont été bien enregistrées'})
 
     return redirect('/?success=True')
-
-
 
 def contact(request):
     if request.method == 'POST':
