@@ -320,46 +320,6 @@
                       </div>
                     </div>
                   </div>
-                  
-                  {% comment %} <script>
-                    $(document).ready(function () {
-                        // Écoutez la soumission du formulaire
-                        $('#contactForm').on('submit', function (event) {
-                            event.preventDefault(); // Empêche la soumission du formulaire par défaut
-                            console.log('Formulaire soumis');
-                            // Effectuez une requête AJAX pour soumettre le formulaire
-                            $.ajax({
-                                type: 'POST',
-                                url: '{% url "payment_form" %}',
-                                data: $(this).serialize(), // Sérialisez les données du formulaire
-                                success: function (data) {
-                                    if (data.success_message) {
-                                        // Affichez le message de succès
-                                        $('#mail_success').text(data.success_message);
-                                        // Affichez le bouton de paiement
-                                        $('#payment_button_container').show();
-                                        // Attachez un gestionnaire d'événements au bouton de paiement pour rediriger vers l'URL
-                                        $('#payment_button').on('click', function (e) {
-                                            e.preventDefault(); // Empêche le comportement de lien par défaut
-                                            // Redirige vers l'URL de paiement
-                                            window.location.href = 'https://pay.wave.com/m/M_YjxiqQWQMNGf/mu/U_6mhHIchehkDk/c/sn/?amount=10000';
-                                        });
-                                    } else if (data.error_message) {
-                                        // Affichez le message d'erreur si nécessaire
-                                        $('#mail_fail').text(data.error_message);
-                                    }
-                                },
-                                error: function () {
-                                    // Gérez les erreurs de requête AJAX si nécessaire
-                                    $('#mail_fail').text("Une erreur s'est produite lors de l'envoi du formulaire.");
-                                }
-                            });
-                        });
-                    });
-                </script> {% endcomment %}
-                
-
-
                 
                 
                 <script>
@@ -566,18 +526,20 @@
             </section>
 
             <section>
-                    <div class="container">                
-                        <div class="col-md-2">
-                            <p></p>
-                        </div>
-                        <div class="col-md-8 text-center">
-                            <a href="#section-tickets"><img alt="" style="width: 1290px; border-radius: 15px;" src="{% static 'images/Bannière - Achetez la Mixtape.png' %}" class="mx-auto d-block"></a>
-                        </div>
-                        
-                        <div class="col-md-2">
-                            <p></p>
-                        </div>
+                <div class="container">                
+                    <div class="col-md-2 col-sm-1"> <!-- Utilisation de col-md-2 pour les écrans larges et col-sm-1 pour les petits écrans -->
+                        <p></p>
                     </div>
+                    <div class="col-md-8 col-sm-10 text-center"> <!-- Utilisation de col-md-8 pour les écrans larges et col-sm-10 pour les petits écrans -->
+                        <a href="#section-tickets">
+                            <img alt="" style="max-width: 100%; border-radius: 15px;" src="{% static 'images/Bannière - Achetez la Mixtape.png' %}" class="mx-auto d-block">
+                        </a>
+                    </div>
+                    
+                    <div class="col-md-2 col-sm-1"> <!-- Utilisation de col-md-2 pour les écrans larges et col-sm-1 pour les petits écrans -->
+                        <p></p>
+                    </div>
+                </div>
             </section>
 
 
@@ -746,14 +708,16 @@
             
             <section>
                 <div class="container">                
-                    <div class="col-md-2">
+                    <div class="col-md-2 col-sm-1"> <!-- Utilisation de col-md-2 pour les écrans larges et col-sm-1 pour les petits écrans -->
                         <p></p>
                     </div>
-                    <div class="col-md-8 text-center">
-                        <a href="#section-tickets"><img alt="" style="width: 1290px; border-radius: 15px;" src="{% static 'images/Bannière - Achetez la Mixtape.png' %}" class="mx-auto d-block"></a>
+                    <div class="col-md-8 col-sm-10 text-center"> <!-- Utilisation de col-md-8 pour les écrans larges et col-sm-10 pour les petits écrans -->
+                        <a href="#section-tickets">
+                            <img alt="" style="max-width: 100%; border-radius: 15px;" src="{% static 'images/Bannière - Achetez la Mixtape.png' %}" class="mx-auto d-block">
+                        </a>
                     </div>
                     
-                    <div class="col-md-2">
+                    <div class="col-md-2 col-sm-1"> <!-- Utilisation de col-md-2 pour les écrans larges et col-sm-1 pour les petits écrans -->
                         <p></p>
                     </div>
                 </div>
@@ -836,14 +800,16 @@
 
             <section>
                 <div class="container">                
-                    <div class="col-md-2">
+                    <div class="col-md-2 col-sm-1"> <!-- Utilisation de col-md-2 pour les écrans larges et col-sm-1 pour les petits écrans -->
                         <p></p>
                     </div>
-                    <div class="col-md-8 text-center">
-                        <a href="#section-tickets"><img alt="" style="width: 1290px; border-radius: 15px;" src="{% static 'images/Bannière - Achetez la Mixtape.png' %}" class="mx-auto d-block"></a>
+                    <div class="col-md-8 col-sm-10 text-center"> <!-- Utilisation de col-md-8 pour les écrans larges et col-sm-10 pour les petits écrans -->
+                        <a href="#section-tickets">
+                            <img alt="" style="max-width: 100%; border-radius: 15px;" src="{% static 'images/Bannière - Achetez la Mixtape.png' %}" class="mx-auto d-block">
+                        </a>
                     </div>
                     
-                    <div class="col-md-2">
+                    <div class="col-md-2 col-sm-1"> <!-- Utilisation de col-md-2 pour les écrans larges et col-sm-1 pour les petits écrans -->
                         <p></p>
                     </div>
                 </div>
@@ -940,14 +906,16 @@
 
             <section>
                 <div class="container">                
-                    <div class="col-md-2">
+                    <div class="col-md-2 col-sm-1"> <!-- Utilisation de col-md-2 pour les écrans larges et col-sm-1 pour les petits écrans -->
                         <p></p>
                     </div>
-                    <div class="col-md-8 text-center">
-                        <a href="#section-tickets"><img alt="" style="width: 1290px; border-radius: 15px;" src="{% static 'images/Bannière - Achetez la Mixtape.png' %}" class="mx-auto d-block"></a>
+                    <div class="col-md-8 col-sm-10 text-center"> <!-- Utilisation de col-md-8 pour les écrans larges et col-sm-10 pour les petits écrans -->
+                        <a href="#section-tickets">
+                            <img alt="" style="max-width: 100%; border-radius: 15px;" src="{% static 'images/Bannière - Achetez la Mixtape.png' %}" class="mx-auto d-block">
+                        </a>
                     </div>
                     
-                    <div class="col-md-2">
+                    <div class="col-md-2 col-sm-1"> <!-- Utilisation de col-md-2 pour les écrans larges et col-sm-1 pour les petits écrans -->
                         <p></p>
                     </div>
                 </div>
