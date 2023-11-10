@@ -22,3 +22,8 @@ class PaymentForm(models.Model):
     
     def __str__(self):
         return self.name
+    
+
+class OrderCounterModel(models.Model):
+    last_command_number = models.IntegerField(default=0)
+
