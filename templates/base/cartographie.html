@@ -1,0 +1,337 @@
+{% extends 'index.html' %}
+
+{% load static %}
+{% block content %}
+<br><br><br>
+<header class="pages-header bg-img valign parallaxie" data-background="{% static 'assets/img/galery/bg-g.jpg' %}" data-overlay-dark="5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="cont text-center">
+                    <h1>Cartographie</h1>
+                    <div class="path">
+                        <a href="{% url 'home' %}">/Accueil</a><span></span><a href="#0" class="active"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="main-content">
+    <br>
+    <div class="container-fluid">
+        <div class="row mt-5">
+            <br></br>
+            {% comment %} <h5 style="color: #115749; text-align: center; width: 100%;">Nombre de Compagnons par département</h5> {% endcomment %}
+            <h5 style="font-family: 'Comfortaa', sans-serif; color: #115749; text-align: center; width: 100%;">Nombre de Compagnons par département</h5>
+            <br></br>
+            <div class="col-md-6 mt-5">
+                <div class="d-flex justify-content-center">
+                    <div id="map1" style="width: 90%; height: 750px;"></div>
+                </div>
+            </div>
+        
+
+            <div class="col-md-6 mt-5">
+                <div class="d-flex justify-content-center">
+                    <div id="container" style="width:90%; height: 750px;"></div>
+                </div>
+            </div>
+        </div>
+        <br></br>
+        <h5 style="font-family: 'Comfortaa', sans-serif;color: #115749; text-align: center; width: 100%;">Nombre de Compagnons par région</h5>
+        <br></br>
+        <div class="row mt-15">
+            <div class="col-md-6">
+                <div class="d-flex justify-content-center">
+                    <div id="map2" style="width: 90%; height: 750px;"></div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                {% comment %} <h1 style="color: black">{{data4}}</h1> {% endcomment %}
+                <div class="d-flex justify-content-center">
+                    <div id="packedBubbleChart" style="width: 95%"></div>
+                </div>
+            </div>
+        </div>        
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script>
+    {% comment %} var map = L1.map('map').setView([14.9, -15], 7); 
+
+    L1.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    var data = {{ data|safe }};
+    for(var i=0; i<data.length; i++) {
+        L1.marker([data[i].latitude, data[i].longitude])
+            .addTo(map)
+            .bindPopup(data[i].prenom + " " + data[i].nom);
+    } {% endcomment %}
+
+    // Second map
+    var map1 = L.map('map1').setView([15, -16], 8); 
+
+    // Ajout de la couche de tuiles OSM
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map1);
+    
+    // Fonction pour obtenir la couleur basée sur le nombre
+    function getColor(count) {
+        return count >= 6 ? '#800026' :
+               count >= 5  ? '#BD0026' :
+               count >= 4  ? '#800026' :
+               count >= 3  ? '#E31A1C' :
+               count >= 2   ? '#FD8D3C' :
+               count >= 1   ? '#FEB24C' :
+                              '#FFEDA0';
+    }
+    
+    // Création et ajout de la légende à la carte
+    var legend = L.control({position: 'bottomleft'});
+    legend.onAdd = function (map) {
+        var div = L.DomUtil.create('div', 'info legend'),
+            grades = [1, 2, 3, 4, 5, 6, 7];
+        for (var i = 0; i < grades.length; i++) {
+            div.innerHTML +=
+                '<i style="background:' + getColor(grades[i] + 1) + '"></i> ' +
+                grades[i] + (grades[i + 1] ? '&ndash;' + grades[i + 1] + '<br>' : '+');
+        }
+        return div;
+    };
+    legend.addTo(map1);
+    
+    // Ajout des markers (ou des circleMarkers) avec des popups basés sur les données fournies
+    var data2 = {{ data2|safe }};
+    for(var dept in data2) {
+        L.circleMarker([data2[dept].latitudeDep, data2[dept].longitudeDep], {
+            radius: 8,
+            fillColor: getColor(data2[dept].count),
+            color: "#000",
+            weight: 1,
+            opacity: 1,
+            fillOpacity: 0.8
+        }).addTo(map1).bindPopup("Nombre: " + data2[dept].count + ", Dept: " + dept);
+    }
+
+    {% comment %} var data3 = {{ data3|safe }};
+    var mapData = Highcharts.maps['countries/sn/sn-all'];
+    var dataSeries = [];
+    
+    for (var dept in data3) {
+        dataSeries.push({
+            "hc-key": dept.toLowerCase(), // Supposant que les clés de 'data2' sont les noms des départements
+            "value": data3[dept].number
+        });
+        if (dept.toLowerCase() === "dakar") {
+            dataSeries.color = "green";
+        }
+        dataSeries.push(dataSeries);
+        console.log(dataSeries)
+    }
+    Highcharts.mapChart('container', {
+        chart: {
+            map: 'countries/sn/sn-all'
+        },
+        title: {
+            text: 'Nombre par Région'
+        },
+        mapNavigation: {
+            enabled: true,
+            buttonOptions: {
+                verticalAlign: 'bottom'
+            }
+        },
+        colorAxis: {
+            min: 0
+        },
+        series: [{
+            data: dataSeries,
+            name: 'Nombre par département',
+            states: {
+                hover: {
+                    color: '#BADA55'
+                }
+            },
+            dataLabels: {
+                enabled: true,
+                format: '{point.name}'
+            }
+        }]
+    }); {% endcomment %}
+
+    // Supposons que vous ayez déjà votre objet data2 défini
+
+// Extraire les noms des départements et les comptes pour les utiliser dans le graphique
+var departments = Object.keys(data2);
+var counts = departments.map(function(dept) {
+    return data2[dept].count;
+});
+
+// Créer le graphique
+Highcharts.chart('container', {
+    chart: {
+        type: 'bar'
+    },
+    title: {
+        text: ''
+    },
+    xAxis: {
+        categories: departments,
+        title: {
+            text: null
+        }
+    },
+    yAxis: {
+        min: 0,
+        title: {
+            text: 'Nombre de Compagnons',
+            align: 'high'
+        },
+        labels: {
+            overflow: 'justify'
+        }
+    },
+    tooltip: {
+        valueSuffix: ' Nombre de Compagnons'
+    },
+    plotOptions: {
+        bar: {
+            dataLabels: {
+                enabled: true
+            }
+        }
+    },
+    credits: {
+        enabled: false
+    },
+    series: [{
+        name: 'Nombre de Compagnons',
+        data: counts
+    }]
+});
+
+    </script>
+    
+
+    {% comment %} <script>
+        // Initialisation de la carte Leaflet
+        var map2 = L.map('map2').setView([15, -16], 7); // Coordonnées initiales centrées sur le Sénégal
+    
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map2);
+    
+        // Supposons que vous passiez data4 à votre template de cette manière :
+        var data4 = {{ data4|safe }}; 
+    
+        for (var region in data4) {
+            var persons = data4[region];
+            for (var i = 0; i < persons.length; i++) {
+                var person = persons[i];
+                var marker = L.marker([person.latitudeReg, person.longitudeReg]).addTo(map2);
+                marker.bindPopup("<b>" + person.nom + " " + person.prenom + "</b><br>" + region).openPopup();
+            }
+        }
+    </script> {% endcomment %}
+        <script>
+            var map2 = L.map('map2').setView([15, -16], 8);
+            
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(map2);
+            
+            var data4 = {{ data4|safe }};
+            
+            for (var region in data4) {
+                var persons = data4[region];
+                var countPersons = persons.length;
+                
+                for (var i = 0; i < persons.length; i++) {
+                    var person = persons[i];
+                    var marker = L.marker([person.latitudeReg, person.longitudeReg]).addTo(map2);
+                    
+
+                    marker.bindPopup("<b>" + region + "<br>Nombre de personnes dans la région: " + countPersons);
+                    
+                    if(region.toLowerCase() != "") {
+                        marker.setIcon(new L.Icon({
+                            iconUrl: '/static/assets/img/image_layer_vieux.png',
+                            shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+                            iconSize: [25, 41],
+                            iconAnchor: [12, 41],
+                            popupAnchor: [1, -34],
+                            shadowSize: [41, 41]
+                        }));
+                    }
+                }
+            }
+        
+            var seriesData = [];
+            for (var region in data4) {
+                var regionData = {
+                    name: region,
+                    data: []
+                };
+                data4[region].forEach(person => {
+                    regionData.data.push({
+                        name: person.prenom + " " + person.nom,
+                        value: 1  
+                    });
+                });
+                seriesData.push(regionData);
+                //console.log("seriesData",seriesData)
+            }
+            Highcharts.chart('packedBubbleChart', {
+                chart: {
+                    type: 'packedbubble',
+                    height: '100%'
+                },
+                title: {
+                    text: ''
+                },
+                tooltip: {
+                    useHTML: true,
+                    pointFormat: '<b>{point.name}:</b> {point.value}'
+                },
+                plotOptions: {
+                    packedbubble: {
+                        minSize: '30%',
+                        maxSize: '70%',
+                        zMin: 0,
+                        zMax: 40,
+                        useSimulation: true,
+                        layoutAlgorithm: {
+                            gravitationalConstant: 0.05,
+                            splitSeries: true,
+                            seriesInteraction: false,
+                            dragBetweenSeries: true,
+                            parentNodeLimit: true
+                        },
+                        dataLabels: {
+                            enabled: true,
+                            format: '{point.name}',
+                            filter: {
+                                property: 'y',
+                                operator: '>',
+                                value: 0
+                            },
+                            style: {
+                                color: 'black',
+                                textOutline: 'none',
+                                fontWeight: 'normal'
+                            }
+                        }
+                    }
+                },
+                series: seriesData
+            });
+            
+
+        </script>
+
+{% endblock %}
