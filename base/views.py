@@ -30,7 +30,10 @@ from django.http import HttpResponseRedirect
 from django.core.mail import send_mail
 from django.views.decorators.csrf import csrf_exempt
 import json
+<<<<<<< HEAD
 from django.contrib.auth.decorators import login_required
+=======
+>>>>>>> 2522b6aa79c2a28c557b68ecfccbb93d70f28d32
 from .models import OrderCounterModel
 
 paydunya.debug = False
@@ -74,12 +77,16 @@ def home(request):
         # Gérez les erreurs de requête ici
         error_message = "Une erreur s'est produite lors de la récupération des données iTunes."
         return render(request, 'error.html', {'error_message': error_message})
+<<<<<<< HEAD
 
 #@login_required
 def confirm(request):
     
     return render(request, 'base/confirm.html')
 
+=======
+  
+>>>>>>> 2522b6aa79c2a28c557b68ecfccbb93d70f28d32
 def get_itunes_data(request):
     artist_name = "Keulthieu The Name"
     url = f"https://itunes.apple.com/search?term={artist_name}&entity=album"
@@ -183,13 +190,22 @@ def payment_form_view(request):
         )
 
         data = {
+<<<<<<< HEAD
             "item_name": "Mixtap Demb ak Tey",
+=======
+            "item_name": "Mistake Demb ak Tey",
+>>>>>>> 2522b6aa79c2a28c557b68ecfccbb93d70f28d32
             "item_price": "10000",
             "currency": "XOF",
             "ref_command": email+phone, 
             "command_name": "Mistake Demb ak Tey",
+<<<<<<< HEAD
             "ipn_url": "https://www.keulthieuthename.com/confirm/",
             "success_url": "https://www.keulthieuthename.com/confirm/",
+=======
+            "ipn_url": "https://www.keulthieuthename.com/",
+            "success_url": "https://www.keulthieuthename.com/",
+>>>>>>> 2522b6aa79c2a28c557b68ecfccbb93d70f28d32
             "cancel_url": "https://www.keulthieuthename.com/base",
         }
         headers = {
